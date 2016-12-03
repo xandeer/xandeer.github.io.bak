@@ -13,8 +13,7 @@ script:
   - hexo g
 
 after_script:
-  - cd ./public
-	- cp ../README.md .
+  - cp README.md public && cd ./public
   - git init
   - git config user.name "xandeer"
   - git config user.email "kkxandeer@gmail.com"
