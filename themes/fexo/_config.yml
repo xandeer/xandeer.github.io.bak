@@ -56,7 +56,7 @@ breadcrumb:
 # 盒子
 toolbox:
   isShow: true # true|fase
-  text:
+  text: 盒子
 
 search_slogan:
   isShow: false # true|fase
