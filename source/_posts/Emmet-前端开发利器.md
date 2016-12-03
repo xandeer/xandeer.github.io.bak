@@ -237,9 +237,9 @@ font-family:;
 ---
 
 - 你还可以定制Emmet插件：
- - 添加新缩写或更新现有缩写，可修改`[snippets.json][16]`文件
- - 更改`Emmet`过滤器和操作的行为，可修改`[preferences.json][17]`文件
- - 定义如何生成`HTML`或`XML`代码，可修改`[syntaxProfiles.json][18]`文件
+ - 添加新缩写或更新现有缩写，可修改 [snippets.json][16] 文件
+ - 更改`Emmet`过滤器和操作的行为，可修改 [preferences.json][17] 文件
+ - 定义如何生成`HTML`或`XML`代码，可修改 [syntaxProfiles.json][18] 文件
 
 ### 针对不同编辑器的插件*
 ---
