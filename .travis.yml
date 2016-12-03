@@ -14,6 +14,7 @@ script:
 
 after_script:
   - cd ./public
+	- cp ../README.md .
   - git init
   - git config user.name "xandeer"
   - git config user.email "kkxandeer@gmail.com"
