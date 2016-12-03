@@ -285,7 +285,7 @@ font-family:;
   [15]: http://dl.iteye.com/upload/attachment/0083/2355/87a3d500-1798-3050-b7e0-df51c94bd203.gif
   [16]: http://docs.emmet.io/customization/snippets/
   [17]: http://docs.emmet.io/customization/preferences/
-  [18]: http://docs.emmet.io/customization/syntax-profilemmet.io/customization/preferences/
+  [18]: http://docs.emmet.io/customization/syntax-profiles/
   [19]: https://github.com/sergeche/emmet-sublime
   [20]: https://github.com/emmetio/Emmet.tmplugin
   [21]: https://github.com/emmetio/emmet-eclipse
