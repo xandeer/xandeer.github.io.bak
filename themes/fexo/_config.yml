@@ -1,7 +1,7 @@
 # Blog info
 blog_name: Xandeer's Blog
 slogan: Focus on your growth
-url: http://xandeer.me
+url: https://xandeer.me
 
 # Set avatar (Absolute url and relative url)
 avatar: /images/avatar.jpg
@@ -10,7 +10,7 @@ avatar: /images/avatar.jpg
 favicon: /favicon.ico
 
 # For seo
-keywords: xandeer,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
+keywords: xandeer,前端,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript
 
 home_nav:
   - name: Blog
@@ -139,7 +139,7 @@ about:
     text_value:
     - "Kevin, 1991."
     - "喜欢设计，擅长编程."
-    - "前端开发工程师，常用 HTML / CSS / JavaScript."
+    - "前端开发工程师，常用 Linux / HTML / CSS / JavaScript."
   - type: Github
     icon: icon-github
     text_key: Github
