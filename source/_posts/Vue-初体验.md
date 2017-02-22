@@ -6,7 +6,7 @@ categories: front-end
 ---
 
 > 项目地址：https://github.com/xandeer/gank
-> 预览地址：[![](images/gank-qrcode.png)](http://xandeer.me/gank)
+> 预览地址：[![](/images/gank-qrcode.png)](http://xandeer.me/gank)
 
 ## 写这篇文章的原因
 
@@ -88,7 +88,7 @@ slider 切换时会触发 `onSlideChangeStart` 事件。我以为问题就这样
 藏起来的部分闪现出来一下，最后在 Stack Overflow 上找到了答案，
 `-webkit-tap-highlight-color: transparent;`。
 
-![gank-themes](images/gank-themes.png)
+![gank-themes](/images/gank-themes.png)
 
 花了一早上搞定了这个。
 
