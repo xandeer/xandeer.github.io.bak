@@ -34,6 +34,9 @@ page_nav:
   - name: 标签
     url: /tags/
     target_blank: false
+  - name: 项目
+    url: /project/
+    target_blank: false
   - name: 友链
     url: /links/
     target_blank: false
