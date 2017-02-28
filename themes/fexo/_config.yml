@@ -192,10 +192,10 @@ project:
     name: gank
     url: https://github.com/xandeer/gank
     intro: 使用 Vue 完成的一个干活集中营的非官方 WebApp
-  # - type: company
-  #   name: Fexo
-  #   url: https://github.com/forsigner/fexo
-  #   intro: A minimalist design theme for hexo
+  - type: personal
+    name: 100-days-of-code
+    url: https://github.com/xandeer/100-days-of-code
+    intro: 码代码100天
   # - type: personal
   #   name: beside
   #   url: https://github.com/forsigner/beside
