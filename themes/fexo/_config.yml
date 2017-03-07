@@ -193,6 +193,10 @@ project:
     url: https://github.com/xandeer/gank
     intro: 使用 Vue 完成的一个干活集中营的非官方 WebApp
   - type: personal
+    name: vue-circle-choice
+    url: https://github.com/xandeer/vue-circle-choice
+    intro: 一个颜色选择器和半圆导航的 vue 组件
+  - type: personal
     name: 100-days-of-code
     url: https://github.com/xandeer/100-days-of-code
     intro: 码代码100天
