@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>终于明白了 JavaScript 中的 this 是什么 | Xandeer&#39;s Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="js,JavaScript,this," />
+  
+
+  <meta name="description" content="1. 相关概念在认识 this 之前，需要了解与之相关的几个概念。 1.1 词法作用域作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的 词法作用域，JavaScript 使用的就是词法作用域。另一种叫做 动态作用域，Bash 脚本在使用它。 简单地说，词法作用域就是在写代码时将变量和块作用域写在哪里来决定的。在">
+<meta name="keywords" content="js,JavaScript,this">
+<meta property="og:type" content="article">
+<meta property="og:title" content="终于明白了 JavaScript 中的 this 是什么">
+<meta property="og:url" content="https://xandeer.me/2016/12/终于明白了-JavaScript-中的-this-是什么/index.html">
+<meta property="og:site_name" content="Xandeer&#39;s Blog">
+<meta property="og:description" content="1. 相关概念在认识 this 之前，需要了解与之相关的几个概念。 1.1 词法作用域作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的 词法作用域，JavaScript 使用的就是词法作用域。另一种叫做 动态作用域，Bash 脚本在使用它。 简单地说，词法作用域就是在写代码时将变量和块作用域写在哪里来决定的。在">
+<meta property="og:updated_time" content="2017-05-02T02:26:01.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="终于明白了 JavaScript 中的 this 是什么">
+<meta name="twitter:description" content="1. 相关概念在认识 this 之前，需要了解与之相关的几个概念。 1.1 词法作用域作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的 词法作用域，JavaScript 使用的就是词法作用域。另一种叫做 动态作用域，Bash 脚本在使用它。 简单地说，词法作用域就是在写代码时将变量和块作用域写在哪里来决定的。在">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=d671a41f" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/categories/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tags/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/links/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-相关概念"><span class="toc-text">1. 相关概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-词法作用域"><span class="toc-text">1.1 词法作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-执行环境"><span class="toc-text">1.2 执行环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-作用域链"><span class="toc-text">1.3 作用域链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-构造函数"><span class="toc-text">1.4 构造函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-this-到底是什么"><span class="toc-text">2. this 到底是什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-绑定规则"><span class="toc-text">2.1 绑定规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-默认绑定"><span class="toc-text">2.1.1 默认绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-隐式绑定"><span class="toc-text">2.1.2 隐式绑定</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1-2-1-隐式丢失"><span class="toc-text">2.1.2.1 隐式丢失</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-3-显示绑定"><span class="toc-text">2.1.3 显示绑定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-4-new-绑定"><span class="toc-text">2.1.4 new 绑定</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-判断-this"><span class="toc-text">2.2 判断 this</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-终于明白了-JavaScript-中的-this-是什么" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">终于明白了 JavaScript 中的 this 是什么</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.12.14</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Kevin</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/front-end/">front-end</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1. 相关概念"></a>1. 相关概念</h2><p>在认识 <code>this</code> 之前，需要了解与之相关的几个概念。</p>
+<h3 id="1-1-词法作用域"><a href="#1-1-词法作用域" class="headerlink" title="1.1 词法作用域"></a>1.1 词法作用域</h3><p>作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的 <strong>词法作用域</strong>，JavaScript 使用的就是词法作用域。另一种叫做 <strong>动态作用域</strong>，Bash 脚本在使用它。</p>
+<p>简单地说，词法作用域就是在写代码时将变量和块作用域写在哪里来决定的。在 JavaScript 中，词法作用域意味着作用域是由书写代码时函数声明的位置来决定的。编译的词法分析阶段基本能够知道全部标识符在哪里以及如何声明的，从而能够预测在执行过程中如何对它们进行查找。</p>
+<h3 id="1-2-执行环境"><a href="#1-2-执行环境" class="headerlink" title="1.2 执行环境"></a>1.2 执行环境</h3><p><strong>执行环境</strong>（execution context）是 JavaScript 中最重要的一个概念。执行环境定义了变量或函数有权访问的其它数据，决定了它们各自的行为。每个执行环境都有一个与之关联的 <strong>变量对象</strong>（variable object），环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在访问数据时会在后台使用它。</p>
+<p>每个函数都有自己的 <strong>执行环境</strong>。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行完成后，栈将其环境弹出，把控制权交给之前的执行环境。</p>
+<p>全局执行环境是最外围的执行环境，在 Web 浏览器中，全局执行环境被认为是 window 对象，因此所有全局变量和函数都是作为 window 对象的属性和方法创建的。</p>
+<h3 id="1-3-作用域链"><a href="#1-3-作用域链" class="headerlink" title="1.3 作用域链"></a>1.3 作用域链</h3><p>当代码在一个环境中执行时，会创建变量对象的一个 <strong>作用域链</strong>（scope chain）。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终是当前执行的代码所在的环境的变量对象。如果这个环境是函数，则将其 <strong>活动对象</strong>（activation object）作为变量对象。活动对象在最开始时只包含一个变量，即 arguments 对象（这个对象在全局环境中是不存在的）。作用域链中的下一个变量对象来自包含（外部）环境，而再下一个变量对象来自下一个包含环境。这样，一直延续到全局执行环境，全局执行环境的变量对象始终都是作用域链中的最后一个对象。</p>
+<h3 id="1-4-构造函数"><a href="#1-4-构造函数" class="headerlink" title="1.4 构造函数"></a>1.4 构造函数</h3><p>JavaScript 中 new 的机制与 Java 等面向类的语言完全不同。在 JavaScript 中，构造函数只是一些使用 new 操作符时被调用的函数。它们并不会属于某个类，也不会实例化一个类。实际上，它们都不能说是一种特殊的函数类型，它们只是被 new 操作符调用的普通函数而已。</p>
+<p>举例来说，思考一下 Number(..) 作为构造函数时的行为，ES5.1 中这样描述它：</p>
+<blockquote>
+<p>当 Number 在 new 表达式中被调用时，它是一个构造函数：它会初始化新创建的对象。</p>
+</blockquote>
+<p>所以，包括内置对象函数在内的所有函数都可以用 new 来调用，这种函数调用被称为构造函数调用。</p>
+<p>实际上，并不存在所谓的“构造函数”，只有对于函数的“构造调用”。</p>
+<p>使用 new 来调用函数，会自动执行下面的操作:</p>
+<ol>
+<li>创建一个全新的对象。</li>
+<li>这个新对象会被执行 [[原型]] 连接。</li>
+<li>这个新对象会绑定到函数调用的 this。</li>
+<li>如果函数没有返回其它对象，那么 new 表达式中的函数调用会自动返回这个新对象。</li>
+</ol>
+<h2 id="2-this-到底是什么"><a href="#2-this-到底是什么" class="headerlink" title="2. this 到底是什么"></a>2. this 到底是什么</h2><p>了解了上述概念，我们就可以解释 JavaScript 中的 this 到底是什么，以及它是如何工作的了。</p>
+<p>当一个函数被调用时，会创建一个执行环境。其中包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。this 就是其中的一个属性，会在函数执行的过程中用到。</p>
+<p>this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。它指向什么完全取决于函数在哪里被调用。</p>
+<h3 id="2-1-绑定规则"><a href="#2-1-绑定规则" class="headerlink" title="2.1 绑定规则"></a>2.1 绑定规则</h3><p>在 <code>JavaScript</code> 中，函数调用有以下四种方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1. 全局作用域中，独立函数调用</span></div><div class="line">foo(p1, p2);</div><div class="line"><span class="comment">// 2. 调用对象的方法</span></div><div class="line">obj.foo(p1, p2);</div><div class="line"><span class="comment">// 3. 使用 call 或 apply</span></div><div class="line">foo.call(context, p1, p2);</div><div class="line"><span class="comment">// 4. 构造函数调用</span></div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> foo(p1, p2);</div></pre></td></tr></table></figure>
+<p>因此，this 也就有四种绑定规则。</p>
+<h4 id="2-1-1-默认绑定"><a href="#2-1-1-默认绑定" class="headerlink" title="2.1.1 默认绑定"></a>2.1.1 默认绑定</h4><p>首先要介绍的是最常见的函数调用类型：独立函数调用。可以把这条规则看作是无法应用其它规则时的默认规则。</p>
+<p>思考一下下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line">foo();  <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>声明在全局作用域中的变量或函数，就是全局对象的一个同名属性或方法。</p>
+<p>当调用 foo() 时，我们看到 this.a 被解析为全局变量 a。为什么？因为本例中，函数调用时应用了 this 的默认绑定，因此 this 指向全局对象。在代码中，foo() 是直接使用不带任何修饰的函数引用进行调用的，因此只能使用默认绑定，无法应用其他规则。</p>
+<p>如果使用严格模式，那么全局对象将无法使用默认绑定，因此 this 会绑定到 undefined。</p>
+<h4 id="2-1-2-隐式绑定"><a href="#2-1-2-隐式绑定" class="headerlink" title="2.1.2 隐式绑定"></a>2.1.2 隐式绑定</h4><p>当函数引用拥有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">foo</span>: foo</div><div class="line">&#125;;</div><div class="line">obj.foo(); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>这里，this.a 相当于 obj.a。</p>
+<h5 id="2-1-2-1-隐式丢失"><a href="#2-1-2-1-隐式丢失" class="headerlink" title="2.1.2.1 隐式丢失"></a>2.1.2.1 隐式丢失</h5><p>一个最常见的 this 绑定问题就是被隐式绑定的函数会丢失绑定对象，也就是说它会应用默认绑定。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">foo</span>: foo</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> bar = obj.foo;</div><div class="line"><span class="keyword">var</span> a = <span class="string">'oops, global'</span>;</div><div class="line">bar(); <span class="comment">// 'oops, global'</span></div></pre></td></tr></table></figure>
+<p>虽然 bar 是 obj.foo 的一个引用，但是实际上，它引用的是 foo 函数本身，因此此时的 bar() 是一个不带任何修饰的函数调用，因此应用了默认绑定。</p>
+<h4 id="2-1-3-显示绑定"><a href="#2-1-3-显示绑定" class="headerlink" title="2.1.3 显示绑定"></a>2.1.3 显示绑定</h4><p>JavaScript 提供的绝大多数函数和我们自己定义的所有函数都可以使用 call() 和 apply() 方法。它们的第一个参数是一个对象，它们会把这个对象绑定到 this ，接着在调用函数时指定这个 this 。因为你可以直接指定 this 的绑定对象，因此我们称之为显式绑定。</p>
+<h4 id="2-1-4-new-绑定"><a href="#2-1-4-new-绑定" class="headerlink" title="2.1.4 new 绑定"></a>2.1.4 new 绑定</h4><p>思考下面的代码，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.a = a;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(bar.a); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>使用 new 来调用函数时，我们构造一个新对象并把它绑定到 foo() 调用中的 this 上。new 是最后一种可以影响函数调用时 this 绑定行为的方法，我们称之为 new 绑定。</p>
+<h3 id="2-2-判断-this"><a href="#2-2-判断-this" class="headerlink" title="2.2 判断 this"></a>2.2 判断 this</h3><p>可以按照下面的顺序来进行判断：</p>
+<ol>
+<li><p>函数是否在 new 中调用（ new 绑定）？如果是的话 this 绑定的是新创建的对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo();</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数是否通过 call、apply（显式绑定）调用？如果是的话，this 绑定的是指定的对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = foo.call(obj2);</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数是否在某个上下文对象中调用（隐式绑定）？如果是的话， this 绑定的是那个上下文对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = obj.foo();</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 undefined ，否则绑定到全局对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = foo();</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>就是这样。对于正常的函数调用来说，理解了这些知识你就可以明白 this 的绑定原理了。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/categories/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tags/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/links/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

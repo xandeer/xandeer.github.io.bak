@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>站在别人的肩膀上--vscode插件 | Xandeer&#39;s Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="vscode,editor," />
+  
+
+  <meta name="description" content="缘起用 vscode 也有一段时间了，也习惯了有什么需求直接在插件市场搜索关键字，但是上周找一个解析 TODO 的插件，找到一个基本满足我需求的，但是它不支持vue。 怎么搞呢？这时候作为程序员的优点就体现出来了，fork 它的源码，然后看看怎么满足自己的需求。 准备Fork vscode-todo-parser代码之后要准备环境，非常简单，只需要安装 vsce 就可以了。 123npm i -g">
+<meta name="keywords" content="vscode,editor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="站在别人的肩膀上--vscode插件">
+<meta property="og:url" content="https://xandeer.me/2017/04/站在别人的肩膀上-vscode插件/index.html">
+<meta property="og:site_name" content="Xandeer&#39;s Blog">
+<meta property="og:description" content="缘起用 vscode 也有一段时间了，也习惯了有什么需求直接在插件市场搜索关键字，但是上周找一个解析 TODO 的插件，找到一个基本满足我需求的，但是它不支持vue。 怎么搞呢？这时候作为程序员的优点就体现出来了，fork 它的源码，然后看看怎么满足自己的需求。 准备Fork vscode-todo-parser代码之后要准备环境，非常简单，只需要安装 vsce 就可以了。 123npm i -g">
+<meta property="og:image" content="http://oag78t4c2.bkt.clouddn.com/xandeer/vscode-plugin.png">
+<meta property="og:updated_time" content="2017-05-02T02:26:01.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="站在别人的肩膀上--vscode插件">
+<meta name="twitter:description" content="缘起用 vscode 也有一段时间了，也习惯了有什么需求直接在插件市场搜索关键字，但是上周找一个解析 TODO 的插件，找到一个基本满足我需求的，但是它不支持vue。 怎么搞呢？这时候作为程序员的优点就体现出来了，fork 它的源码，然后看看怎么满足自己的需求。 准备Fork vscode-todo-parser代码之后要准备环境，非常简单，只需要安装 vsce 就可以了。 123npm i -g">
+<meta name="twitter:image" content="http://oag78t4c2.bkt.clouddn.com/xandeer/vscode-plugin.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=d671a41f" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/categories/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tags/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/links/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#缘起"><span class="toc-text">缘起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查找切入点"><span class="toc-text">查找切入点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改源码"><span class="toc-text">修改源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译安装"><span class="toc-text">编译安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感谢"><span class="toc-text">感谢</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-站在别人的肩膀上-vscode插件" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">站在别人的肩膀上--vscode插件</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.04.18</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Kevin</span>
+        </span>
+      
+
+      
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>用 vscode 也有一段时间了，也习惯了有什么需求直接在插件市场搜索关键字，<br>但是上周找一个解析 TODO 的插件，找到一个基本满足我需求的，但是它不支持<br><code>vue</code>。</p>
+<p>怎么搞呢？这时候作为程序员的优点就体现出来了，fork 它的源码，然后看看<br>怎么满足自己的需求。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Fork <a href="https://github.com/kantlove/vscode-todo-parser" target="_blank" rel="external">vscode-todo-parser</a><br>代码之后要准备环境，非常简单，只需要安装 <code>vsce</code> 就可以了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm i -g vsce</div><div class="line"><span class="meta">#</span> or</div><div class="line">yarn global add vsce</div></pre></td></tr></table></figure>
+<h2 id="查找切入点"><a href="#查找切入点" class="headerlink" title="查找切入点"></a>查找切入点</h2><p>用 vscode 打开源码路径，查看 src 目录结构，看名称只用关注以下两个子目录即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">├── const</div><div class="line">│   ├── Icons.ts</div><div class="line">│   ├── LanguageExtensions.ts</div><div class="line">│   ├── Names.ts</div><div class="line">│   ├── Numbers.ts</div><div class="line">│   ├── RegexStrings.ts</div><div class="line">│   ├── Unsupport.ts</div><div class="line">│   └── all.ts</div><div class="line">├── types</div><div class="line">│   ├── CommandType.ts</div><div class="line">│   ├── FileType.ts</div><div class="line">│   ├── FileUri.ts</div><div class="line">│   ├── LanguageType.ts</div><div class="line">│   ├── RegexType.ts</div><div class="line">│   ├── TodoType.ts</div><div class="line">│   └── all.ts</div></pre></td></tr></table></figure>
+<p>简单浏览之后很容易就找到两个关键文件：</p>
+<ul>
+<li><code>RegexStrings.ts</code></li>
+<li><code>LanguageType.ts</code></li>
+</ul>
+<h2 id="修改源码"><a href="#修改源码" class="headerlink" title="修改源码"></a>修改源码</h2><p><code>LanguageType.ts</code> 中有以下一段代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> ADA          = <span class="keyword">new</span> LanguageType(<span class="string">"ada"</span>, <span class="keyword">new</span> RegexType(RG_ADA));</div><div class="line"><span class="keyword">static</span> C            = <span class="keyword">new</span> LanguageType(<span class="string">"c"</span>, <span class="keyword">new</span> RegexType(RG_JAVA));</div><div class="line"><span class="keyword">static</span> COFFEESCRIPT = <span class="keyword">new</span> LanguageType(<span class="string">"coffeescript"</span>, <span class="keyword">new</span> RegexType(RG_PYTHON));</div></pre></td></tr></table></figure>
+<p>一看这代码就明白，我需要添加一个新对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> VUE = <span class="keyword">new</span> LanguageType(<span class="string">"vue"</span>, <span class="keyword">new</span> RegexType(RG_VUE));</div></pre></td></tr></table></figure>
+<p>然后看看 <code>RG_*</code> 都是什么，就在 <code>RegexStrings.ts</code> 中看到了下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_JAVA = <span class="string">"/\\*([\\s\\S]*?)\\*/|//([^\\r\\n]+)"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_PYTHON = <span class="string">"#\\s*(.+)"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_ADA = <span class="string">"--\\s*(.+)"</span>;</div></pre></td></tr></table></figure>
+<p>又因为我还用 <code>pug</code>，所以加了一个正则字符串，要不然直接用 <code>RG_JAVA</code> 就可以了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_PUG = <span class="string">"//- ([^\\r\\n]+)"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_VUE = <span class="string">"//-? ([^\\r\\n]+)|/\\*([\\s\\S]*?)\\*/"</span>;</div></pre></td></tr></table></figure>
+<p>代码这就改好了，下面就要安装到自己的机器上了。</p>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><p>准备阶段安装的 <code>vsce</code> 需要上台了，在项目根目录下执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vsce package</div></pre></td></tr></table></figure>
+<p>在当前目录下就会根据 <code>package.json</code> 文件配置生成一个 <code>*.vsix</code> 文件。<br>安装更简单：</p>
+<p><img src="http://oag78t4c2.bkt.clouddn.com/xandeer/vscode-plugin.png" alt="install"></p>
+<p>之后 <code>Reload Window</code> 就可以了。</p>
+<p><code>vsce</code> 还有更多其它功能，比如将修改完的插件发布到插件市场等，<br>在需要的时候再去探索。</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><ol>
+<li>vscode 团队；</li>
+<li>各插件作者；</li>
+<li>更不能忘记开源。</li>
+</ol>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/categories/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tags/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/links/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

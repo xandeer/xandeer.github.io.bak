@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vue 初体验 | Xandeer&#39;s Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="vue," />
+  
+
+  <meta name="description" content="项目地址：https://github.com/xandeer/gank预览地址：  写这篇文章的原因昨天完成了我的第一个开源项目的基础功能，也是对 Vue 第一次尝试的一次总结。 开始项目缘由第一个原因，成果展示。因为去年任性地裸辞了，前前后后学习前端时间了，余粮快没有了，是时候重新寻找一份工作了，而之前又没有前端方面的作品，所以就当这个项目是自己寻找工作时可以一说的成果。 第二个原因，看完">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 初体验">
+<meta property="og:url" content="https://xandeer.me/2017/02/Vue-初体验/index.html">
+<meta property="og:site_name" content="Xandeer&#39;s Blog">
+<meta property="og:description" content="项目地址：https://github.com/xandeer/gank预览地址：  写这篇文章的原因昨天完成了我的第一个开源项目的基础功能，也是对 Vue 第一次尝试的一次总结。 开始项目缘由第一个原因，成果展示。因为去年任性地裸辞了，前前后后学习前端时间了，余粮快没有了，是时候重新寻找一份工作了，而之前又没有前端方面的作品，所以就当这个项目是自己寻找工作时可以一说的成果。 第二个原因，看完">
+<meta property="og:image" content="https://xandeer.me/images/gank-qrcode.png">
+<meta property="og:image" content="https://xandeer.me/images/gank-themes.png">
+<meta property="og:updated_time" content="2017-05-02T02:26:01.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue 初体验">
+<meta name="twitter:description" content="项目地址：https://github.com/xandeer/gank预览地址：  写这篇文章的原因昨天完成了我的第一个开源项目的基础功能，也是对 Vue 第一次尝试的一次总结。 开始项目缘由第一个原因，成果展示。因为去年任性地裸辞了，前前后后学习前端时间了，余粮快没有了，是时候重新寻找一份工作了，而之前又没有前端方面的作品，所以就当这个项目是自己寻找工作时可以一说的成果。 第二个原因，看完">
+<meta name="twitter:image" content="https://xandeer.me/images/gank-qrcode.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=d671a41f" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/categories/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tags/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/links/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#写这篇文章的原因"><span class="toc-text">写这篇文章的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始项目缘由"><span class="toc-text">开始项目缘由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目时间线"><span class="toc-text">项目时间线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#做什么？"><span class="toc-text">做什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本功能"><span class="toc-text">基本功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fix-bugs"><span class="toc-text">fix bugs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用-Swiper"><span class="toc-text">使用 Swiper</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#保存页面位置"><span class="toc-text">保存页面位置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#美化"><span class="toc-text">美化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#感想"><span class="toc-text">感想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-text">最后</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Vue-初体验" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Vue 初体验</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.02.22</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Kevin</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/front-end/">front-end</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <blockquote>
+<p>项目地址：<a href="https://github.com/xandeer/gank" target="_blank" rel="external">https://github.com/xandeer/gank</a><br>预览地址：<a href="http://xandeer.me/gank"><img src="/images/gank-qrcode.png" alt=""></a></p>
+</blockquote>
+<h2 id="写这篇文章的原因"><a href="#写这篇文章的原因" class="headerlink" title="写这篇文章的原因"></a>写这篇文章的原因</h2><p>昨天完成了我的第一个开源项目的基础功能，也是对 <code>Vue</code> 第一次尝试的一次总结。</p>
+<h2 id="开始项目缘由"><a href="#开始项目缘由" class="headerlink" title="开始项目缘由"></a>开始项目缘由</h2><p>第一个原因，成果展示。因为去年任性地裸辞了，前前后后学习前端时间了，余粮快没有了，是时候重新寻找<br>一份工作了，而之前又没有前端方面的作品，所以就当这个项目是自己寻找工作时可以一说的成果。</p>
+<p>第二个原因，看完文档该实践了。去年辞职前就开始学习前端知识了，关注了几个个人认为还不错的前端公众<br>号，之前就有每天刷开发者头条和掘金的习惯，把之前关注后台的注意力转向了前端。自然，<code>React</code> 和<br><code>Vue</code> 会经常出现，只是刚开始关注时前端知识量太薄弱，不适合一上来就跳过基础直接使用框架。年底时<br>认为差不多该了解学习框架了，在两者（<code>Angular</code> 不怎么了解）里面选择了 <code>Vue</code>，为什么选择 <code>Vue</code><br>？（要跑题了）这个暂时就不说了，我记着在掘金上看过一篇忽悠大家使用 <code>Vue</code> 的译文。然后过年的那<br>几天，掌控自己的时间还是挺难的，不能每天码代码，就抽空每天看看 <code>Vue</code> 的文档，看完后有空也会简单<br>尝试一下。半个月前将教程全都过了一遍，有不少概念没有搞清楚，需要实践出真知了。</p>
+<h2 id="项目时间线"><a href="#项目时间线" class="headerlink" title="项目时间线"></a>项目时间线</h2><h3 id="做什么？"><a href="#做什么？" class="headerlink" title="做什么？"></a>做什么？</h3><p>首先，确定自己要做什么。因为每天都刷开发者头条和掘金，觉着这两个应用都不错（我不是做广告的），就<br>决定尝试做个类似的内容呈现应用。做这个决定的时间不算在总时间内。</p>
+<p>既然要做内容呈现应用，内容从哪里来？平常的积累和各种搜索引擎，平常的积累指的是平常阅读技术类文章<br>时，长年累月收藏的素材；各种搜索引擎指谷歌、Stack Overflow、github 和知乎等。这个过程花费了<br>近一天，从知乎日报、CNode、v2ex、hacker news 和 gank.io 中选择了最后一个。</p>
+<p>确定做什么与寻找 api 总花费1天。</p>
+<h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><p>之前只是看了 <code>Vue</code> 的教程文档，没有了解过 <code>vue-router</code> 和<code>vuex</code>，在做的时候边做边学。用了<br><code>mint-ui</code>，一个用于 <code>Vue</code> 的 UI 库，大概浏览了一下文档，需要什么再具体看。还用了强大的<br><code>swiper3</code>，在 github 上找到了 <code>vue</code> 的适配，也是先浏览了文档，再根据需要具体学习，在这个库<br>上被坑的挺惨，后文会具体说明，但确实非常强大。</p>
+<p>主要基于以上技术，花了6天实现了基本功能（存在一些可见的不影响功能，但影响视觉效果的 bugs）。</p>
+<h3 id="fix-bugs"><a href="#fix-bugs" class="headerlink" title="fix bugs"></a>fix bugs</h3><h4 id="使用-Swiper"><a href="#使用-Swiper" class="headerlink" title="使用 Swiper"></a>使用 Swiper</h4><p>我用了 <code>swiper</code> 实现首页的滑动切换效果，因为同时也要支持点击导航切换，因此使用了自定义的<br><code>pagination</code>。问题就出在这里了，我还做了主题色的切换，因此切换主题色时，当前活动的导航条要与<br>主题色同色，而 <code>pagination</code> 是由 <code>swiper</code> 控制的，所以就在首页挂载的时候找到相应的元素修改<br>颜色。slider 切换后也要更改当前活动导航的颜色，我就去看 <code>swiper</code> 的文档，在里面找到了<br>slider 切换时会触发 <code>onSlideChangeStart</code> 事件。我以为问题就这样解决了，然而有一天手一贱，<br>将 Chrome 的手机模式点掉了，然后上面的现象突然又出现在了我面前（想哭了都）。然后就来回切换了一<br>下，想想这个时候发生了什么，原来是浏览器窗口大小发生了变化，<code>swiper</code> 需要重新绘制<br><code>pagination</code>。怎么办，虽然用户很少会触发这个现象，但是他们横竖屏切换时也会发生啊，想到的最简单<br>的方法就是给 <code>window</code> 添加一个 <code>resize</code> 事件，然后我就这么做了。后来想想，这么做有点不爽，<br>既然已经依赖了 <code>swiper</code>，还要自己监听 <code>window</code> 的<code>resize</code> 事件，<code>swiper</code> 肯定已经做过了。<br>然后在控制台看了一下 <code>window</code> 的 <code>resize</code> 事件，果然有一个 <code>swiper</code> 在监听 <code>resize</code> 事<br>件。怎么处理呢？去看文档，发现有一个 <code>onPaginationRendered</code> 事件，问题又一次解决了。</p>
+<p>在此，深深地感谢 <code>swiper</code> 源码贡献者和文档译者。</p>
+<h4 id="保存页面位置"><a href="#保存页面位置" class="headerlink" title="保存页面位置"></a>保存页面位置</h4><p>一开始，认为这个很简单就做到了，开始也确实是这样发展的，直到有一天又犯贱注释了一行代码。注释完，<br>当时没有发现这个问题，有一天晚上好像是在解决 <code>swiper</code> 的问题时，突然发现怎么跳转页面，再回来不<br>是之前的位置了。我还以为出现幻觉了，当时没管，接着处理 <code>swiper</code> 问题，第二天再确定了一下，保存<br>位置确实没有生效。看了看 <code>vue</code> 开发者工具，跳转页面时确实会更新之前页面的位置，但每次都是0。在<br><code>beforeDestroy</code> 事件中打印滚动的元素，可以获取到，但打印元素的 <code>scrollTop</code> 值每次都返回0。<br>使用谷歌没有找到解决方案，就想了想，为什么之前是好用的？再想想，应该和 <code>vue</code> 的生命周期有关系，<br>之前哪个改动会影响 <code>vue</code> 的生命周期呢？然后想起来我之前注释掉的那行代码是 <code>router-view</code> 上面<br>的 <code>transition</code> 组件，在动画效果完成前，页面肯定是存在的，然后取消掉那行注释试了试，果然好了。<br>但是，已然没有想明白，在 <code>beforeDestroy</code> 中获取到的 <code>scrollTop</code> 值为什么总是0（有明白的大<br>神烦请告诉我一下 kkxandeer@gmail.com）？</p>
+<p>修复 bug 大概花了2天左右。</p>
+<h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><p>做了一个切换主题色的小功能，一开始先完成功能，做得比较丑，罗列了一堆颜色条在页面上。后来花了半天<br>时间，做成了一个圆盘形的拾色器的样子。一下子好看多了，拿出手机试了试，在 iOS 上点击时会把后面隐<br>藏起来的部分闪现出来一下，最后在 Stack Overflow 上找到了答案，<br><code>-webkit-tap-highlight-color: transparent;</code>。</p>
+<p><img src="/images/gank-themes.png" alt="gank-themes"></p>
+<p>花了一早上搞定了这个。</p>
+<p>初步完成此项目总计花费10天。</p>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>知识需要经过刻意练习才会转化为能力，每个有坑的地方，也就是要成长的地方。前几天在 Medium 上看到<br>一句话：</p>
+<blockquote>
+<p>I fail all the time, I just don’t give up.</p>
+</blockquote>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><code>Vue</code> 确实非常好用，非常值得入手。</p>
+<p>放个广告：<a href="https://github.com/xandeer/resume" target="_blank" rel="external">本人简历</a>，希望早日被人捡走。</p>
+<p>感谢开源！</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/categories/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tags/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/links/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

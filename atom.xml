@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Xandeer&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xandeer.me/"/>
+  <updated>2017-05-02T02:26:01.788Z</updated>
+  <id>https://xandeer.me/</id>
+  
+  <author>
+    <name>Kevin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google-Tips</title>
+    <link href="https://xandeer.me/2017/04/Google-Tips/"/>
+    <id>https://xandeer.me/2017/04/Google-Tips/</id>
+    <published>2017-04-28T01:38:25.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<p>每天都在使用搜索引擎，Google 的匹配度还是相当高的，基本上第一页就可以找到问题的答案。但有时还是需要翻几页，需要人为过滤。前几天开始看《Google 工作整理术》，昨天看到的部分刚好是关于更高效使用 Google，在这里记录一下。</p>
+<h4 id="1-不用区分大小写"><a href="#1-不用区分大小写" class="headerlink" title="1. 不用区分大小写"></a>1. 不用区分大小写</h4><p><code>Paris</code> 和 <code>paris</code> 没有区别。</p>
+<h4 id="2-双引号包裹的词会作为一个完整短语"><a href="#2-双引号包裹的词会作为一个完整短语" class="headerlink" title="2. 双引号包裹的词会作为一个完整短语"></a>2. 双引号包裹的词会作为一个完整短语</h4><p><code>&quot;paris hotels&quot;</code>，会将 <code>paris hotels</code> 作为一个完整短语进行搜索。</p>
+<h4 id="3-在单词前加上-，要搜索的网页中应该包含这个词"><a href="#3-在单词前加上-，要搜索的网页中应该包含这个词" class="headerlink" title="3. 在单词前加上 ~，要搜索的网页中应该包含这个词"></a>3. 在单词前加上 <code>~</code>，要搜索的网页中应该包含这个词</h4><p><code>&quot;paris hotels&quot; ~affordable</code>，网页中会包含 <code>affordable</code> 或其同义词，如 <code>discount, cheap, budget</code> 等。</p>
+<h4 id="4-OR-操作符，至少包含其中一个"><a href="#4-OR-操作符，至少包含其中一个" class="headerlink" title="4. OR 操作符，至少包含其中一个"></a>4. <code>OR</code> 操作符，至少包含其中一个</h4><p><code>&quot;paris hotels&quot; affordable OR cheap OR budget</code>，网页中至少会包含 <code>affordable, cheap, budget</code> 中的一个。</p>
+<h4 id="5-在单词前加上-，排除不想要的结果"><a href="#5-在单词前加上-，排除不想要的结果" class="headerlink" title="5. 在单词前加上 -，排除不想要的结果"></a>5. 在单词前加上 <code>-</code>，排除不想要的结果</h4><p><code>&quot;digital camera&quot; -Nikon</code>，除 Nikon 之外所有品牌的数码相机。</p>
+<h4 id="6-表示数值范围"><a href="#6-表示数值范围" class="headerlink" title="6. ... 表示数值范围"></a>6. <code>...</code> 表示数值范围</h4><p><code>&quot;digital camera&quot; $100...$500</code>，搜索 100~500 美元的数码相机。<br><code>&quot;数码相机&quot; ￥100...￥500</code>，100~500 人民币的数码相机。</p>
+<h4 id="7-site-搜索特定网站"><a href="#7-site-搜索特定网站" class="headerlink" title="7. site: 搜索特定网站"></a>7. <code>site:</code> 搜索特定网站</h4><p><code>site:xandeer.me &quot;google tips&quot;</code>，在 ‘xandeer.me’ 网站搜索 “google tips”。</p>
+<h4 id="8-filetype-搜索特定类型文件"><a href="#8-filetype-搜索特定类型文件" class="headerlink" title="8. filetype: 搜索特定类型文件"></a>8. <code>filetype:</code> 搜索特定类型文件</h4><p><code>front-end filetype:pdf</code>，查找关于前端的 pdf 文档。</p>
+<h4 id="9-in-单位转换，货币、长度、重量等等"><a href="#9-in-单位转换，货币、长度、重量等等" class="headerlink" title="9. in 单位转换，货币、长度、重量等等"></a>9. <code>in</code> 单位转换，货币、长度、重量等等</h4><p><code>100 美元 in 人民币</code></p>
+<p><code>10 英里 in 公里</code></p>
+<h4 id="10-time-时间查询"><a href="#10-time-时间查询" class="headerlink" title="10. time 时间查询"></a>10. <code>time</code> 时间查询</h4><p><code>time 迪拜</code></p>
+<h4 id="11-weather-天气情况"><a href="#11-weather-天气情况" class="headerlink" title="11. weather 天气情况"></a>11. <code>weather</code> 天气情况</h4><p><code>weather 深圳</code></p>
+<h4 id="12-define-词语释义"><a href="#12-define-词语释义" class="headerlink" title="12. define 词语释义"></a>12. <code>define</code> 词语释义</h4><p><code>define 梵</code></p>
+<h4 id="13-stock-股票行情"><a href="#13-stock-股票行情" class="headerlink" title="13. stock 股票行情"></a>13. <code>stock</code> 股票行情</h4><p><code>stock google</code><br><code>stock alphabet</code></p>
+<h4 id="14-算术计算"><a href="#14-算术计算" class="headerlink" title="14. 算术计算"></a>14. 算术计算</h4><p><code>5*9+(sqrt 10)^3=</code></p>
+<p>以上为书中的部分内容，将个人认为较为常用的整理出来了。并在下面附上思维导图：</p>
+<p><img src="http://oag78t4c2.bkt.clouddn.com/xandeer/google-tips.png" alt="Google Tips"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;每天都在使用搜索引擎，Google 的匹配度还是相当高的，基本上第一页就可以找到问题的答案。但有时还是需要翻几页，需要人为过滤。前几天开始看《Google 工作整理术》，昨天看到的部分刚好是关于更高效使用 Google，在这里记录一下。&lt;/p&gt;
+&lt;h4 id=&quot;1-不用区分
+    
+    </summary>
+    
+    
+      <category term="tips" scheme="https://xandeer.me/tags/tips/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《刀锋》读后感</title>
+    <link href="https://xandeer.me/2017/04/%E3%80%8A%E5%88%80%E9%94%8B%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <id>https://xandeer.me/2017/04/《刀锋》读后感/</id>
+    <published>2017-04-27T05:16:39.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="人生的意义是什么？"><a href="#人生的意义是什么？" class="headerlink" title="人生的意义是什么？"></a>人生的意义是什么？</h2><p>这种大灾问，整个人类历史中不知有多少人找到了答案。拉里原本一个普通的美国青年，在一战时目睹了生命的脆弱，之后开始思考这个问题。当别人都想着成就一番事业时，他却说自己想要闲晃。这一晃就晃没了未婚妻，从美国晃到了欧洲，又偶然到了印度。期间看了非常多的书，然而没有找到答案。当过矿工，收过庄稼，在船上打过杂。每当思绪不清时，就去从事一些体力劳动。最后在印度得到了他自己的想法，并非答案，轮回说比上帝创世更合理。</p>
+<blockquote>
+<p>如果没有骇人的地壳变动，就见不到喜马拉雅山的壮丽；中国工匠能把花瓶烧得薄如蛋壳，并赋予优美的造型，点缀美丽的装饰，着上迷人的色彩，涂上灿然的光泽，但是蛋瓷不改易碎的本质，只要失手掉在地上，就成了满地碎片。同理可证，我们在世界上所珍视的价值，也只能跟邪恶并存，不是吗？</p>
+</blockquote>
+<p>那么意义到底何在呢？</p>
+<blockquote>
+<p>意义就在于我心里的感受啊。</p>
+</blockquote>
+<p>最终，一切只能向自己的内心寻求答案。艾略特一生追求于跻身上流社会，最终成为社交名流，至死时仍偏执于亲自回复宴会的邀请函。伊莎贝尔一直保持着对拉里的执着，同时也追求着虚荣的生活。</p>
+<p>他们虽然生活在同一个时代，有时在空间上也有交集，但每个人看到的都是不同的世界。拉里花了相当大的精力去寻找答案，向内心寻找自己，其他人可能也寻找过，但很快就放弃了，并转而在他人身上寻找自己。</p>
+<h2 id="为什么会读这本书？"><a href="#为什么会读这本书？" class="headerlink" title="为什么会读这本书？"></a>为什么会读这本书？</h2><p>去年在先锋书店逛的时候，进去时在斜坡的右手边看到了《月亮与六便士》，翻了一下就逛其它地方了，离开前买本书算是纪念一下。出现这个想法的时候，出现在脑海中第一本就是《月亮与六便士》，凭着印象找到了它。</p>
+<p>那是我看的第一本毛姆的书，看的时候也是不想停下来，看完后就记住了毛姆，并将《刀锋》放到了书单中。</p>
+<p>前几天因人推荐，下载了微信读书，随便看的时候看到了《刀锋》就加到了书架里。在看另一本书看累了时，打开了它，然后就停不下来了。看了三个晚上，有两个晚上看到了近一点，又一次打乱了早起计划。</p>
+<h2 id="想从中获得什么？"><a href="#想从中获得什么？" class="headerlink" title="想从中获得什么？"></a>想从中获得什么？</h2><p>一开始看时根本没有想过这个问题，还是在这本书里看到的这个问题。看到这个问题时，罕见地停了一会，思考了一下，没有得到什么答案。反而想到了与书无关的一个答案，保持身体健康。</p>
+<p>看到中途时，发现自己与拉里有一点点相似处，对不少东西不在乎，其实不是不在乎，而是有更重要的东西需要去在乎。当然，距离拉里的程度还是相当遥远的。我的想法还停留在实现财务自由，不为生活必需而出卖自己的时间，而拉里却认为金钱是枷锁，在回美国前将自己的所有财产都处理掉了。</p>
+<p>想要获得的可能是看完书，知道书中人物最后的结局及故事的发展，看看其中有没有我想要的答案。</p>
+<p>虽然没有得到什么有用的答案，但是问题可以引发思考，而思考的结局不一定是获得答案，反而可能是出现更多问题。</p>
+<p>最后附上沃尔特·萨维奇·兰多的《生与死》：</p>
+<blockquote>
+<p>吾不与人争，胜败均不值。<br>钟情大自然，次之为艺术。<br>生命之火暖双手，他日余烬消逝，吾可安然离去。</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;人生的意义是什么？&quot;&gt;&lt;a href=&quot;#人生的意义是什么？&quot; class=&quot;headerlink&quot; title=&quot;人生的意义是什么？&quot;&gt;&lt;/a&gt;人生的意义是什么？&lt;/h2&gt;&lt;p&gt;这种大灾问，整个人类历史中不知有多少人找到了答案。拉里原本一个普通的美国青年，在一战
+    
+    </summary>
+    
+    
+      <category term="read" scheme="https://xandeer.me/tags/read/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用 pug 代替 html</title>
+    <link href="https://xandeer.me/2017/04/%E7%94%A8-pug-%E4%BB%A3%E6%9B%BF-html/"/>
+    <id>https://xandeer.me/2017/04/用-pug-代替-html/</id>
+    <published>2017-04-20T11:14:03.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="pug-是什么？"><a href="#pug-是什么？" class="headerlink" title="pug 是什么？"></a>pug 是什么？</h2><p><img src="http://oag78t4c2.bkt.clouddn.com/xandeer/sad-pug.jpg" alt="sad pug"></p>
+<p>来自东北的忧郁小狗。</p>
+<p>认识了真实世界的 pug，下面介绍前端领域的 <code>pug</code>：</p>
+<p>一个普通的模板引擎，只用来渲染 <code>HTML</code>，不像 <code>mustache</code> 等用途那么广。如果你为成天写 <code>&lt;&gt;</code> 而烦，那 <code>pug</code> 绝对是很好的解决方案。如果你学过 <code>Python</code>，或者平常写代码有良好的缩进风格，那么写 <code>pug</code> 不会让你感到烦恼；平常不注意代码缩进，那么从 <code>pug</code> 开始吧。</p>
+<h2 id="pug-语法简介"><a href="#pug-语法简介" class="headerlink" title="pug 语法简介"></a>pug 语法简介</h2><p><code>pug</code> 提供了编程语言的多数基本语法，变量、条件分支、循环等。因此用 <code>pug</code> 生成 <code>HTML</code> 也就实现了 <code>HTML</code> 结构的逻辑复用，如有时好几个页面都有类似甚至一样的结构时，可以用 <code>block</code> 与 <code>extends</code> 或者 <code>mixin</code> 复用代码，代替之前的在不同 <code>*.html</code> 文件间复制粘贴。当然，这些不是要介绍的重点，我现在的项目基本都会使用 <code>vue</code>，因此逻辑相关的部分基本都是用 <code>vue</code> 的指令实现。</p>
+<p>重点是<strong>使用 <code>pug</code> 之后，不用再写 <code>HTML</code>，代码既好看又变少了</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#pug.hello(data-msg=&quot;hello&quot;)</div><div class="line">  p.hello-msg Hello World</div></pre></td></tr></table></figure>
+<p>上面的代码转换成 <code>HTML</code>，是下面这个样子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"pug"</span> <span class="attr">class</span>=<span class="string">"hello msg"</span> <span class="attr">data-msg</span>=<span class="string">"hello"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"hello-msg"</span>&gt;</span>Hello Wrold<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>是不是写起来比 <code>HTML</code> 更舒服？如果答案是肯定的话，欢迎加入 <code>pug</code>。学习成本估计也就看文档一两个小时，之后需要用什么再查看几次文档就足够了。</p>
+<p>更多的语法就不说了，我学的时候还没有中文文档，现在已经有完整的<a href="https://pugjs.org/zh-cn/api/getting-started.html" target="_blank" rel="external">中文文档</a>了，欢迎去看。Dash 中也可以找到文档，不过好像只有英文版，后期查看时会挺方便。</p>
+<h2 id="怎么将-pug-转换为-HTML？"><a href="#怎么将-pug-转换为-HTML？" class="headerlink" title="怎么将 pug 转换为 HTML？"></a>怎么将 pug 转换为 HTML？</h2><p>如果使用 <code>vscode</code> 或者 <code>atom</code>，都有插件可以将 <code>pug</code> 文件转换成 <code>HTML</code> 的插件，其它编辑器不太清楚。</p>
+<p>如果已经在使用 <code>webpack</code>，那么有个 <code>loader</code> 叫 <code>pug-loader</code>。没有使用 <code>webpack</code> 的前端同学，赶紧去用吧。</p>
+<h2 id="在-vue-中使用-pug"><a href="#在-vue-中使用-pug" class="headerlink" title="在 vue 中使用 pug"></a>在 vue 中使用 pug</h2><p>这个实在是 so easy，<code>vue</code> 的 <code>template</code> 支持 <code>lang</code> 属性，所以直接像下面这样写就搞定了：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">lang</span>=<span class="string">"pug"</span>&gt;</span></div><div class="line">#pug.hello(data-msg="hello")</div><div class="line">  p.hello-msg Hello World</div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>不要忘了添加 <code>pug-loader</code>。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>做一个有追求的开发，能自动化的要想办法自动化，可以简化的要简化。将节省的时间与精力用来学习更多，或者与喜欢的人一起去做喜欢的事。</p>
+<blockquote>
+<p>将时间浪费在美好的事物上。</p>
+</blockquote>
+<p>与诸君共勉。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;pug-是什么？&quot;&gt;&lt;a href=&quot;#pug-是什么？&quot; class=&quot;headerlink&quot; title=&quot;pug 是什么？&quot;&gt;&lt;/a&gt;pug 是什么？&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://oag78t4c2.bkt.clouddn.com/xan
+    
+    </summary>
+    
+    
+      <category term="front-end" scheme="https://xandeer.me/tags/front-end/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>站在别人的肩膀上--vscode插件</title>
+    <link href="https://xandeer.me/2017/04/%E7%AB%99%E5%9C%A8%E5%88%AB%E4%BA%BA%E7%9A%84%E8%82%A9%E8%86%80%E4%B8%8A-vscode%E6%8F%92%E4%BB%B6/"/>
+    <id>https://xandeer.me/2017/04/站在别人的肩膀上-vscode插件/</id>
+    <published>2017-04-18T11:26:00.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>用 vscode 也有一段时间了，也习惯了有什么需求直接在插件市场搜索关键字，<br>但是上周找一个解析 TODO 的插件，找到一个基本满足我需求的，但是它不支持<br><code>vue</code>。</p>
+<p>怎么搞呢？这时候作为程序员的优点就体现出来了，fork 它的源码，然后看看<br>怎么满足自己的需求。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>Fork <a href="https://github.com/kantlove/vscode-todo-parser" target="_blank" rel="external">vscode-todo-parser</a><br>代码之后要准备环境，非常简单，只需要安装 <code>vsce</code> 就可以了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm i -g vsce</div><div class="line"><span class="meta">#</span> or</div><div class="line">yarn global add vsce</div></pre></td></tr></table></figure>
+<h2 id="查找切入点"><a href="#查找切入点" class="headerlink" title="查找切入点"></a>查找切入点</h2><p>用 vscode 打开源码路径，查看 src 目录结构，看名称只用关注以下两个子目录即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">├── const</div><div class="line">│   ├── Icons.ts</div><div class="line">│   ├── LanguageExtensions.ts</div><div class="line">│   ├── Names.ts</div><div class="line">│   ├── Numbers.ts</div><div class="line">│   ├── RegexStrings.ts</div><div class="line">│   ├── Unsupport.ts</div><div class="line">│   └── all.ts</div><div class="line">├── types</div><div class="line">│   ├── CommandType.ts</div><div class="line">│   ├── FileType.ts</div><div class="line">│   ├── FileUri.ts</div><div class="line">│   ├── LanguageType.ts</div><div class="line">│   ├── RegexType.ts</div><div class="line">│   ├── TodoType.ts</div><div class="line">│   └── all.ts</div></pre></td></tr></table></figure>
+<p>简单浏览之后很容易就找到两个关键文件：</p>
+<ul>
+<li><code>RegexStrings.ts</code></li>
+<li><code>LanguageType.ts</code></li>
+</ul>
+<h2 id="修改源码"><a href="#修改源码" class="headerlink" title="修改源码"></a>修改源码</h2><p><code>LanguageType.ts</code> 中有以下一段代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> ADA          = <span class="keyword">new</span> LanguageType(<span class="string">"ada"</span>, <span class="keyword">new</span> RegexType(RG_ADA));</div><div class="line"><span class="keyword">static</span> C            = <span class="keyword">new</span> LanguageType(<span class="string">"c"</span>, <span class="keyword">new</span> RegexType(RG_JAVA));</div><div class="line"><span class="keyword">static</span> COFFEESCRIPT = <span class="keyword">new</span> LanguageType(<span class="string">"coffeescript"</span>, <span class="keyword">new</span> RegexType(RG_PYTHON));</div></pre></td></tr></table></figure>
+<p>一看这代码就明白，我需要添加一个新对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> VUE = <span class="keyword">new</span> LanguageType(<span class="string">"vue"</span>, <span class="keyword">new</span> RegexType(RG_VUE));</div></pre></td></tr></table></figure>
+<p>然后看看 <code>RG_*</code> 都是什么，就在 <code>RegexStrings.ts</code> 中看到了下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_JAVA = <span class="string">"/\\*([\\s\\S]*?)\\*/|//([^\\r\\n]+)"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_PYTHON = <span class="string">"#\\s*(.+)"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_ADA = <span class="string">"--\\s*(.+)"</span>;</div></pre></td></tr></table></figure>
+<p>又因为我还用 <code>pug</code>，所以加了一个正则字符串，要不然直接用 <code>RG_JAVA</code> 就可以了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_PUG = <span class="string">"//- ([^\\r\\n]+)"</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> RG_VUE = <span class="string">"//-? ([^\\r\\n]+)|/\\*([\\s\\S]*?)\\*/"</span>;</div></pre></td></tr></table></figure>
+<p>代码这就改好了，下面就要安装到自己的机器上了。</p>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><p>准备阶段安装的 <code>vsce</code> 需要上台了，在项目根目录下执行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vsce package</div></pre></td></tr></table></figure>
+<p>在当前目录下就会根据 <code>package.json</code> 文件配置生成一个 <code>*.vsix</code> 文件。<br>安装更简单：</p>
+<p><img src="http://oag78t4c2.bkt.clouddn.com/xandeer/vscode-plugin.png" alt="install"></p>
+<p>之后 <code>Reload Window</code> 就可以了。</p>
+<p><code>vsce</code> 还有更多其它功能，比如将修改完的插件发布到插件市场等，<br>在需要的时候再去探索。</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><ol>
+<li>vscode 团队；</li>
+<li>各插件作者；</li>
+<li>更不能忘记开源。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;缘起&quot;&gt;&lt;a href=&quot;#缘起&quot; class=&quot;headerlink&quot; title=&quot;缘起&quot;&gt;&lt;/a&gt;缘起&lt;/h2&gt;&lt;p&gt;用 vscode 也有一段时间了，也习惯了有什么需求直接在插件市场搜索关键字，&lt;br&gt;但是上周找一个解析 TODO 的插件，找到一个基本满足
+    
+    </summary>
+    
+    
+      <category term="vscode" scheme="https://xandeer.me/tags/vscode/"/>
+    
+      <category term="editor" scheme="https://xandeer.me/tags/editor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 初体验</title>
+    <link href="https://xandeer.me/2017/02/Vue-%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+    <id>https://xandeer.me/2017/02/Vue-初体验/</id>
+    <published>2017-02-22T06:06:38.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>项目地址：<a href="https://github.com/xandeer/gank" target="_blank" rel="external">https://github.com/xandeer/gank</a><br>预览地址：<a href="http://xandeer.me/gank"><img src="/images/gank-qrcode.png" alt=""></a></p>
+</blockquote>
+<h2 id="写这篇文章的原因"><a href="#写这篇文章的原因" class="headerlink" title="写这篇文章的原因"></a>写这篇文章的原因</h2><p>昨天完成了我的第一个开源项目的基础功能，也是对 <code>Vue</code> 第一次尝试的一次总结。</p>
+<h2 id="开始项目缘由"><a href="#开始项目缘由" class="headerlink" title="开始项目缘由"></a>开始项目缘由</h2><p>第一个原因，成果展示。因为去年任性地裸辞了，前前后后学习前端时间了，余粮快没有了，是时候重新寻找<br>一份工作了，而之前又没有前端方面的作品，所以就当这个项目是自己寻找工作时可以一说的成果。</p>
+<p>第二个原因，看完文档该实践了。去年辞职前就开始学习前端知识了，关注了几个个人认为还不错的前端公众<br>号，之前就有每天刷开发者头条和掘金的习惯，把之前关注后台的注意力转向了前端。自然，<code>React</code> 和<br><code>Vue</code> 会经常出现，只是刚开始关注时前端知识量太薄弱，不适合一上来就跳过基础直接使用框架。年底时<br>认为差不多该了解学习框架了，在两者（<code>Angular</code> 不怎么了解）里面选择了 <code>Vue</code>，为什么选择 <code>Vue</code><br>？（要跑题了）这个暂时就不说了，我记着在掘金上看过一篇忽悠大家使用 <code>Vue</code> 的译文。然后过年的那<br>几天，掌控自己的时间还是挺难的，不能每天码代码，就抽空每天看看 <code>Vue</code> 的文档，看完后有空也会简单<br>尝试一下。半个月前将教程全都过了一遍，有不少概念没有搞清楚，需要实践出真知了。</p>
+<h2 id="项目时间线"><a href="#项目时间线" class="headerlink" title="项目时间线"></a>项目时间线</h2><h3 id="做什么？"><a href="#做什么？" class="headerlink" title="做什么？"></a>做什么？</h3><p>首先，确定自己要做什么。因为每天都刷开发者头条和掘金，觉着这两个应用都不错（我不是做广告的），就<br>决定尝试做个类似的内容呈现应用。做这个决定的时间不算在总时间内。</p>
+<p>既然要做内容呈现应用，内容从哪里来？平常的积累和各种搜索引擎，平常的积累指的是平常阅读技术类文章<br>时，长年累月收藏的素材；各种搜索引擎指谷歌、Stack Overflow、github 和知乎等。这个过程花费了<br>近一天，从知乎日报、CNode、v2ex、hacker news 和 gank.io 中选择了最后一个。</p>
+<p>确定做什么与寻找 api 总花费1天。</p>
+<h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><p>之前只是看了 <code>Vue</code> 的教程文档，没有了解过 <code>vue-router</code> 和<code>vuex</code>，在做的时候边做边学。用了<br><code>mint-ui</code>，一个用于 <code>Vue</code> 的 UI 库，大概浏览了一下文档，需要什么再具体看。还用了强大的<br><code>swiper3</code>，在 github 上找到了 <code>vue</code> 的适配，也是先浏览了文档，再根据需要具体学习，在这个库<br>上被坑的挺惨，后文会具体说明，但确实非常强大。</p>
+<p>主要基于以上技术，花了6天实现了基本功能（存在一些可见的不影响功能，但影响视觉效果的 bugs）。</p>
+<h3 id="fix-bugs"><a href="#fix-bugs" class="headerlink" title="fix bugs"></a>fix bugs</h3><h4 id="使用-Swiper"><a href="#使用-Swiper" class="headerlink" title="使用 Swiper"></a>使用 Swiper</h4><p>我用了 <code>swiper</code> 实现首页的滑动切换效果，因为同时也要支持点击导航切换，因此使用了自定义的<br><code>pagination</code>。问题就出在这里了，我还做了主题色的切换，因此切换主题色时，当前活动的导航条要与<br>主题色同色，而 <code>pagination</code> 是由 <code>swiper</code> 控制的，所以就在首页挂载的时候找到相应的元素修改<br>颜色。slider 切换后也要更改当前活动导航的颜色，我就去看 <code>swiper</code> 的文档，在里面找到了<br>slider 切换时会触发 <code>onSlideChangeStart</code> 事件。我以为问题就这样解决了，然而有一天手一贱，<br>将 Chrome 的手机模式点掉了，然后上面的现象突然又出现在了我面前（想哭了都）。然后就来回切换了一<br>下，想想这个时候发生了什么，原来是浏览器窗口大小发生了变化，<code>swiper</code> 需要重新绘制<br><code>pagination</code>。怎么办，虽然用户很少会触发这个现象，但是他们横竖屏切换时也会发生啊，想到的最简单<br>的方法就是给 <code>window</code> 添加一个 <code>resize</code> 事件，然后我就这么做了。后来想想，这么做有点不爽，<br>既然已经依赖了 <code>swiper</code>，还要自己监听 <code>window</code> 的<code>resize</code> 事件，<code>swiper</code> 肯定已经做过了。<br>然后在控制台看了一下 <code>window</code> 的 <code>resize</code> 事件，果然有一个 <code>swiper</code> 在监听 <code>resize</code> 事<br>件。怎么处理呢？去看文档，发现有一个 <code>onPaginationRendered</code> 事件，问题又一次解决了。</p>
+<p>在此，深深地感谢 <code>swiper</code> 源码贡献者和文档译者。</p>
+<h4 id="保存页面位置"><a href="#保存页面位置" class="headerlink" title="保存页面位置"></a>保存页面位置</h4><p>一开始，认为这个很简单就做到了，开始也确实是这样发展的，直到有一天又犯贱注释了一行代码。注释完，<br>当时没有发现这个问题，有一天晚上好像是在解决 <code>swiper</code> 的问题时，突然发现怎么跳转页面，再回来不<br>是之前的位置了。我还以为出现幻觉了，当时没管，接着处理 <code>swiper</code> 问题，第二天再确定了一下，保存<br>位置确实没有生效。看了看 <code>vue</code> 开发者工具，跳转页面时确实会更新之前页面的位置，但每次都是0。在<br><code>beforeDestroy</code> 事件中打印滚动的元素，可以获取到，但打印元素的 <code>scrollTop</code> 值每次都返回0。<br>使用谷歌没有找到解决方案，就想了想，为什么之前是好用的？再想想，应该和 <code>vue</code> 的生命周期有关系，<br>之前哪个改动会影响 <code>vue</code> 的生命周期呢？然后想起来我之前注释掉的那行代码是 <code>router-view</code> 上面<br>的 <code>transition</code> 组件，在动画效果完成前，页面肯定是存在的，然后取消掉那行注释试了试，果然好了。<br>但是，已然没有想明白，在 <code>beforeDestroy</code> 中获取到的 <code>scrollTop</code> 值为什么总是0（有明白的大<br>神烦请告诉我一下 kkxandeer@gmail.com）？</p>
+<p>修复 bug 大概花了2天左右。</p>
+<h3 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h3><p>做了一个切换主题色的小功能，一开始先完成功能，做得比较丑，罗列了一堆颜色条在页面上。后来花了半天<br>时间，做成了一个圆盘形的拾色器的样子。一下子好看多了，拿出手机试了试，在 iOS 上点击时会把后面隐<br>藏起来的部分闪现出来一下，最后在 Stack Overflow 上找到了答案，<br><code>-webkit-tap-highlight-color: transparent;</code>。</p>
+<p><img src="/images/gank-themes.png" alt="gank-themes"></p>
+<p>花了一早上搞定了这个。</p>
+<p>初步完成此项目总计花费10天。</p>
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>知识需要经过刻意练习才会转化为能力，每个有坑的地方，也就是要成长的地方。前几天在 Medium 上看到<br>一句话：</p>
+<blockquote>
+<p>I fail all the time, I just don’t give up.</p>
+</blockquote>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><code>Vue</code> 确实非常好用，非常值得入手。</p>
+<p>放个广告：<a href="https://github.com/xandeer/resume" target="_blank" rel="external">本人简历</a>，希望早日被人捡走。</p>
+<p>感谢开源！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;项目地址：&lt;a href=&quot;https://github.com/xandeer/gank&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/xandeer/gank&lt;/a&gt;&lt;br&gt;预览地址：&lt;a
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://xandeer.me/categories/front-end/"/>
+    
+    
+      <category term="vue" scheme="https://xandeer.me/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS 爬坑之路</title>
+    <link href="https://xandeer.me/2016/12/JS-%E7%88%AC%E5%9D%91%E4%B9%8B%E8%B7%AF/"/>
+    <id>https://xandeer.me/2016/12/JS-爬坑之路/</id>
+    <published>2016-12-26T11:46:58.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="共享原型数据"><a href="#共享原型数据" class="headerlink" title="共享原型数据"></a>共享原型数据</h2><p>思考下面代码的输出：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = &#123;<span class="attr">count</span>: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">var</span> bar = <span class="built_in">Object</span>.create(foo);</div><div class="line"><span class="built_in">console</span>.log(bar.count++); <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(foo.count); <span class="comment">// ?</span></div></pre></td></tr></table></figure>
+<p>最后一行的输出是 <strong>1</strong>，仔细思考一下其实就明白了。定义 <code>bar</code> 的时候将 <code>foo</code> 对象添加到了 <code>bar</code> 原型链中，因此在 <code>bar</code> 的原型链中可以找到 <code>count</code> 属性，而 <code>bar.count++</code> 等价于 <code>bar.count = bar.count + 1</code>。在这个赋值语句的左边，进行 <strong>LHS</strong> 查询，<code>bar</code> 自身没有 <code>count</code> 属性，所以这个时候，<code>bar</code> 会添加一个新属性 <code>count</code>；在赋值语句的右边，进行 <strong>RHS</strong> 查询，<code>bar</code> 自身也没有 <code>count</code> 属性，但是在其原型链中可以找到 <code>count</code> 属性，并获取其值。所以这行代码最终给 <code>bar</code> 对象添加了一个 <code>count</code>  属性，并将其赋值为 ‘2’，而 <code>foo</code> 的 <code>count</code> 值依然为 ‘1’。</p>
+<h2 id="Event-loop"><a href="#Event-loop" class="headerlink" title="Event loop"></a>Event loop</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'A'</span>);</div><div class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;<span class="built_in">console</span>.log(<span class="string">'B'</span>);&#125;, <span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'C'</span>);</div></pre></td></tr></table></figure>
+<p>你是不是认为上面的代码输出是 <code>A B C</code>？而实际输出是 <code>A C B</code>，这是为什么呢？</p>
+<p>JavaScript 是单线程的，因此任务需要排队执行。JS 引擎永远都只能执行一个任务，但是 JS 引擎通常都是在一个宿主环境中运行的，最常见的事浏览器和 Node.js。像 Ajax 和 Timer 函数都是由宿主提供的，当你发起了一个 Ajax 请求时，你会给 Ajax 一个回调函数，这时候 JS 引擎会告诉浏览器，“这个函数我先不执行，你帮我保存一下，等你接收完数据之后，告诉我我该执行这个函数了。”然后浏览器就会监听网络请求，等到接收完数据后，浏览器通知 JS 引擎，“数据接收完了，你该执行这段代码了”。等到 JS 引擎执行完当前任务后，就会执行 Ajax 请求的回调函数了。浏览器和 JS 引擎之间交互的中介叫做 <code>Event loop</code>。</p>
+<p><code>setTimeout</code> 和 <code>setInterval</code> 也是一样的，需要注意的一点是，JS 引擎会保证回调函数不会在你设置的时间前被调用，也就是说你设置了 1000ms，实际有可能在 1200ms 后才执行回调函数。 <code>setTimeout(..0)</code> 可以 hack 异步调用，就像上面那样，只有在第三行执行完之后，才会调用 <code>setTimeout</code> 的回调函数。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;共享原型数据&quot;&gt;&lt;a href=&quot;#共享原型数据&quot; class=&quot;headerlink&quot; title=&quot;共享原型数据&quot;&gt;&lt;/a&gt;共享原型数据&lt;/h2&gt;&lt;p&gt;思考下面代码的输出：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;t
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://xandeer.me/categories/front-end/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>终于明白了 JavaScript 中的 this 是什么</title>
+    <link href="https://xandeer.me/2016/12/%E7%BB%88%E4%BA%8E%E6%98%8E%E7%99%BD%E4%BA%86-JavaScript-%E4%B8%AD%E7%9A%84-this-%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <id>https://xandeer.me/2016/12/终于明白了-JavaScript-中的-this-是什么/</id>
+    <published>2016-12-14T06:50:38.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-相关概念"><a href="#1-相关概念" class="headerlink" title="1. 相关概念"></a>1. 相关概念</h2><p>在认识 <code>this</code> 之前，需要了解与之相关的几个概念。</p>
+<h3 id="1-1-词法作用域"><a href="#1-1-词法作用域" class="headerlink" title="1.1 词法作用域"></a>1.1 词法作用域</h3><p>作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。作用域共有两种主要的工作模型。第一种是最为普遍的，被大多数编程语言所采用的 <strong>词法作用域</strong>，JavaScript 使用的就是词法作用域。另一种叫做 <strong>动态作用域</strong>，Bash 脚本在使用它。</p>
+<p>简单地说，词法作用域就是在写代码时将变量和块作用域写在哪里来决定的。在 JavaScript 中，词法作用域意味着作用域是由书写代码时函数声明的位置来决定的。编译的词法分析阶段基本能够知道全部标识符在哪里以及如何声明的，从而能够预测在执行过程中如何对它们进行查找。</p>
+<h3 id="1-2-执行环境"><a href="#1-2-执行环境" class="headerlink" title="1.2 执行环境"></a>1.2 执行环境</h3><p><strong>执行环境</strong>（execution context）是 JavaScript 中最重要的一个概念。执行环境定义了变量或函数有权访问的其它数据，决定了它们各自的行为。每个执行环境都有一个与之关联的 <strong>变量对象</strong>（variable object），环境中定义的所有变量和函数都保存在这个对象中。虽然我们编写的代码无法访问这个对象，但解析器在访问数据时会在后台使用它。</p>
+<p>每个函数都有自己的 <strong>执行环境</strong>。当执行流进入一个函数时，函数的环境就会被推入一个环境栈中。而在函数执行完成后，栈将其环境弹出，把控制权交给之前的执行环境。</p>
+<p>全局执行环境是最外围的执行环境，在 Web 浏览器中，全局执行环境被认为是 window 对象，因此所有全局变量和函数都是作为 window 对象的属性和方法创建的。</p>
+<h3 id="1-3-作用域链"><a href="#1-3-作用域链" class="headerlink" title="1.3 作用域链"></a>1.3 作用域链</h3><p>当代码在一个环境中执行时，会创建变量对象的一个 <strong>作用域链</strong>（scope chain）。作用域链的用途，是保证对执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终是当前执行的代码所在的环境的变量对象。如果这个环境是函数，则将其 <strong>活动对象</strong>（activation object）作为变量对象。活动对象在最开始时只包含一个变量，即 arguments 对象（这个对象在全局环境中是不存在的）。作用域链中的下一个变量对象来自包含（外部）环境，而再下一个变量对象来自下一个包含环境。这样，一直延续到全局执行环境，全局执行环境的变量对象始终都是作用域链中的最后一个对象。</p>
+<h3 id="1-4-构造函数"><a href="#1-4-构造函数" class="headerlink" title="1.4 构造函数"></a>1.4 构造函数</h3><p>JavaScript 中 new 的机制与 Java 等面向类的语言完全不同。在 JavaScript 中，构造函数只是一些使用 new 操作符时被调用的函数。它们并不会属于某个类，也不会实例化一个类。实际上，它们都不能说是一种特殊的函数类型，它们只是被 new 操作符调用的普通函数而已。</p>
+<p>举例来说，思考一下 Number(..) 作为构造函数时的行为，ES5.1 中这样描述它：</p>
+<blockquote>
+<p>当 Number 在 new 表达式中被调用时，它是一个构造函数：它会初始化新创建的对象。</p>
+</blockquote>
+<p>所以，包括内置对象函数在内的所有函数都可以用 new 来调用，这种函数调用被称为构造函数调用。</p>
+<p>实际上，并不存在所谓的“构造函数”，只有对于函数的“构造调用”。</p>
+<p>使用 new 来调用函数，会自动执行下面的操作:</p>
+<ol>
+<li>创建一个全新的对象。</li>
+<li>这个新对象会被执行 [[原型]] 连接。</li>
+<li>这个新对象会绑定到函数调用的 this。</li>
+<li>如果函数没有返回其它对象，那么 new 表达式中的函数调用会自动返回这个新对象。</li>
+</ol>
+<h2 id="2-this-到底是什么"><a href="#2-this-到底是什么" class="headerlink" title="2. this 到底是什么"></a>2. this 到底是什么</h2><p>了解了上述概念，我们就可以解释 JavaScript 中的 this 到底是什么，以及它是如何工作的了。</p>
+<p>当一个函数被调用时，会创建一个执行环境。其中包含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。this 就是其中的一个属性，会在函数执行的过程中用到。</p>
+<p>this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。它指向什么完全取决于函数在哪里被调用。</p>
+<h3 id="2-1-绑定规则"><a href="#2-1-绑定规则" class="headerlink" title="2.1 绑定规则"></a>2.1 绑定规则</h3><p>在 <code>JavaScript</code> 中，函数调用有以下四种方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1. 全局作用域中，独立函数调用</span></div><div class="line">foo(p1, p2);</div><div class="line"><span class="comment">// 2. 调用对象的方法</span></div><div class="line">obj.foo(p1, p2);</div><div class="line"><span class="comment">// 3. 使用 call 或 apply</span></div><div class="line">foo.call(context, p1, p2);</div><div class="line"><span class="comment">// 4. 构造函数调用</span></div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> foo(p1, p2);</div></pre></td></tr></table></figure>
+<p>因此，this 也就有四种绑定规则。</p>
+<h4 id="2-1-1-默认绑定"><a href="#2-1-1-默认绑定" class="headerlink" title="2.1.1 默认绑定"></a>2.1.1 默认绑定</h4><p>首先要介绍的是最常见的函数调用类型：独立函数调用。可以把这条规则看作是无法应用其它规则时的默认规则。</p>
+<p>思考一下下面的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</div><div class="line">foo();  <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>声明在全局作用域中的变量或函数，就是全局对象的一个同名属性或方法。</p>
+<p>当调用 foo() 时，我们看到 this.a 被解析为全局变量 a。为什么？因为本例中，函数调用时应用了 this 的默认绑定，因此 this 指向全局对象。在代码中，foo() 是直接使用不带任何修饰的函数引用进行调用的，因此只能使用默认绑定，无法应用其他规则。</p>
+<p>如果使用严格模式，那么全局对象将无法使用默认绑定，因此 this 会绑定到 undefined。</p>
+<h4 id="2-1-2-隐式绑定"><a href="#2-1-2-隐式绑定" class="headerlink" title="2.1.2 隐式绑定"></a>2.1.2 隐式绑定</h4><p>当函数引用拥有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">foo</span>: foo</div><div class="line">&#125;;</div><div class="line">obj.foo(); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>这里，this.a 相当于 obj.a。</p>
+<h5 id="2-1-2-1-隐式丢失"><a href="#2-1-2-1-隐式丢失" class="headerlink" title="2.1.2.1 隐式丢失"></a>2.1.2.1 隐式丢失</h5><p>一个最常见的 this 绑定问题就是被隐式绑定的函数会丢失绑定对象，也就是说它会应用默认绑定。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">  <span class="attr">a</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">foo</span>: foo</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> bar = obj.foo;</div><div class="line"><span class="keyword">var</span> a = <span class="string">'oops, global'</span>;</div><div class="line">bar(); <span class="comment">// 'oops, global'</span></div></pre></td></tr></table></figure>
+<p>虽然 bar 是 obj.foo 的一个引用，但是实际上，它引用的是 foo 函数本身，因此此时的 bar() 是一个不带任何修饰的函数调用，因此应用了默认绑定。</p>
+<h4 id="2-1-3-显示绑定"><a href="#2-1-3-显示绑定" class="headerlink" title="2.1.3 显示绑定"></a>2.1.3 显示绑定</h4><p>JavaScript 提供的绝大多数函数和我们自己定义的所有函数都可以使用 call() 和 apply() 方法。它们的第一个参数是一个对象，它们会把这个对象绑定到 this ，接着在调用函数时指定这个 this 。因为你可以直接指定 this 的绑定对象，因此我们称之为显式绑定。</p>
+<h4 id="2-1-4-new-绑定"><a href="#2-1-4-new-绑定" class="headerlink" title="2.1.4 new 绑定"></a>2.1.4 new 绑定</h4><p>思考下面的代码，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.a = a;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(bar.a); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<p>使用 new 来调用函数时，我们构造一个新对象并把它绑定到 foo() 调用中的 this 上。new 是最后一种可以影响函数调用时 this 绑定行为的方法，我们称之为 new 绑定。</p>
+<h3 id="2-2-判断-this"><a href="#2-2-判断-this" class="headerlink" title="2.2 判断 this"></a>2.2 判断 this</h3><p>可以按照下面的顺序来进行判断：</p>
+<ol>
+<li><p>函数是否在 new 中调用（ new 绑定）？如果是的话 this 绑定的是新创建的对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = <span class="keyword">new</span> foo();</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数是否通过 call、apply（显式绑定）调用？如果是的话，this 绑定的是指定的对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = foo.call(obj2);</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数是否在某个上下文对象中调用（隐式绑定）？如果是的话， this 绑定的是那个上下文对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = obj.foo();</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 undefined ，否则绑定到全局对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bar = foo();</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>就是这样。对于正常的函数调用来说，理解了这些知识你就可以明白 this 的绑定原理了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-相关概念&quot;&gt;&lt;a href=&quot;#1-相关概念&quot; class=&quot;headerlink&quot; title=&quot;1. 相关概念&quot;&gt;&lt;/a&gt;1. 相关概念&lt;/h2&gt;&lt;p&gt;在认识 &lt;code&gt;this&lt;/code&gt; 之前，需要了解与之相关的几个概念。&lt;/p&gt;
+&lt;h3 id=&quot;
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://xandeer.me/categories/front-end/"/>
+    
+    
+      <category term="js" scheme="https://xandeer.me/tags/js/"/>
+    
+      <category term="JavaScript" scheme="https://xandeer.me/tags/JavaScript/"/>
+    
+      <category term="this" scheme="https://xandeer.me/tags/this/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>科学上网</title>
+    <link href="https://xandeer.me/2016/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>https://xandeer.me/2016/12/科学上网/</id>
+    <published>2016-12-08T08:18:48.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下所有内容均来自<a href="https://github.com/racaljk/hosts" target="_blank" rel="external">https://github.com/racaljk/hosts</a>，为方便上不了 Github 的同学轻松地科学上网，请按照以下内容配置。</p>
+<p>点击此处获取 <a href="/files/hosts">hosts</a> 文件。</p>
+<p><a href="https://www.google.com.hk/search?q=Google" target="_blank" rel="external"><img src="https://www.google.com/logos/doodles/2016/googles-18th-birthday-5661535679545344-hp2x.gif" alt="doodle" title="Google 18岁啦"></a></p>
+<p><strong>使用本项目之前，请先阅读此 <a href="README.md">README</a> 及下方的许可协议</strong></p>
+<p><strong>注意: Google 等网站请通过 https 方式访问，如</strong> <a href="https://www.google.com/ncr" target="_blank" rel="external">https://www.google.com/ncr</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><a href="https://gitter.im/racaljk/hosts?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" title="Gitter chat room" target="_blank" rel="external">聊天室</a></th>
+<th style="text-align:center"><a href="https://travis-ci.org/racaljk/hosts" title="Travis CI Status" target="_blank" rel="external">hosts 格式检测</a></th>
+<th style="text-align:center"><a href="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts" target="_blank" rel="external">镜像hosts</a></th>
+<th style="text-align:center"><a href="https://github.com/racaljk/hosts/wiki/The-hosts-FAQ" target="_blank" rel="external">常见问题解答</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://gitter.im/racaljk/hosts?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" title="Gitter chat room" target="_blank" rel="external"><img src="https://github.com/racaljk/hosts/releases/download/img-bak/gitter-metadata.png" alt="chat-metadata" title="Join the chat"></a></td>
+<td style="text-align:center"><a href="https://travis-ci.org/racaljk/hosts" title="Travis CI Status" target="_blank" rel="external"><img src="https://travis-ci.org/racaljk/hosts.svg" alt="travis-metadata" title="Travis CI Metadata"></a></td>
+<td style="text-align:center"><a href="https://coding.net/u/scaffrey/p/hosts/git" title="Coding" target="_blank" rel="external"><img src="https://github.com/racaljk/hosts/releases/download/img-bak/coding-icon.png" alt="coding.net"></a></td>
+<td style="text-align:center"><a href="https://github.com/racaljk/hosts/wiki/The-hosts-FAQ" target="_blank" rel="external"><img src="http://www.easyicon.net/api/resizeApi.php?id=1190784&amp;size=48" alt="faq-icon"></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="更新-hosts"><a href="#更新-hosts" class="headerlink" title="更新 hosts"></a>更新 hosts</h2><h4 id="推荐使用项目内的-应用-工具-来自动备份-更新-hosts-文件"><a href="#推荐使用项目内的-应用-工具-来自动备份-更新-hosts-文件" class="headerlink" title="推荐使用项目内的 应用/工具 来自动备份/更新 hosts 文件"></a>推荐使用项目内的 <a href="tools">应用/工具</a> 来自动备份/更新 hosts 文件</h4><ul>
+<li><p><strong>Windows</strong></p>
+<ol>
+<li><p>用文本编辑器（如 <a href="https://notepad-plus-plus.org/" target="_blank" rel="external">Notepad++</a>）打开：<code>%SystemRoot%\System32\drivers\etc\hosts</code></p>
+<blockquote>
+<p><img src="https://i.imgur.com/BwW2cft.jpg" alt=""></p>
+</blockquote>
+</li>
+<li><p>将 <a href="https://raw.githubusercontent.com/racaljk/hosts/master/hosts" title="hosts on Github" target="_blank" rel="external">hosts</a> 全部内容复制到上面的文件内并保存。</p>
+<blockquote>
+<p>注意：如果遇到无法保存，请右键文件hosts并找到“属性” -&gt; “安全”，然后选择你登陆的用户名，最后点击编辑，勾选“写入”即可。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><strong>其他平台</strong>请将 <a href="https://raw.githubusercontent.com/racaljk/hosts/master/hosts" title="hosts on Github" target="_blank" rel="external">hosts</a> 全部内容复制到<code>/etc/hosts</code>中并保存。</p>
+<blockquote>
+<p>附：<a href="https://github.com/racaljk/hosts/wiki/各平台-hosts-文件位置" target="_blank" rel="external">各平台 hosts 位置</a></p>
+</blockquote>
+</li>
+</ul>
+<p><strong>注意</strong>： 若更新后，hosts 没有立即生效，请重置网络：</p>
+<ul>
+<li>在系统设置内开关网络，或启用禁用飞行模式</li>
+</ul>
+<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ul>
+<li><a href="https://github.com/racaljk/hosts/wiki/关于中国的互联网" target="_blank" rel="external">关于中国的互联网</a></li>
+<li>获取更多信息，请访问 <a href="https://github.com/racaljk/hosts/wiki" target="_blank" rel="external">Wiki 页面</a> 。如有问题，请开 <a href="https://github.com/racaljk/hosts/issues" target="_blank" rel="external">Issue</a> 反馈。</li>
+</ul>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><ul>
+<li>本项目的所有代码除另有说明外,均按照 <a href="LICENSE">MIT License</a> 发布。</li>
+<li>本项目的hosts，README.MD，wiki等资源基于<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external">CC BY-NC-SA 4.0</a><br>这意味着你可以拷贝、并再发行本项目的内容，但是你将必须同样<strong>提供原作者信息以及协议声明</strong>。同时你也<strong>不能将本项目用于商业用途</strong>，<br>按照我们狭义的理解（增加附属条款），凡是<strong>任何盈利的活动皆属于商业用途</strong>。</li>
+<li>请在遵守当地相关法律法规的前提下使用本项目。</li>
+</ul>
+<p><img src="https://github.com/docker/dockercraft/raw/master/docs/img/contribute.png?raw=true" alt="img-source-from-https://github.com/docker/dockercraft"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以下所有内容均来自&lt;a href=&quot;https://github.com/racaljk/hosts&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/racaljk/hosts&lt;/a&gt;，为方便上不了 Github 的同学
+    
+    </summary>
+    
+    
+      <category term="hosts" scheme="https://xandeer.me/tags/hosts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS 中的重要概念</title>
+    <link href="https://xandeer.me/2016/12/JS-%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/"/>
+    <id>https://xandeer.me/2016/12/JS-中的重要概念/</id>
+    <published>2016-12-04T07:12:36.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>JS 引擎：从头到尾负责整个 JavaScript 程序的编译及执行过程。</p>
+<p>编译器：负责语法分析及代码生成等。</p>
+<p>作用域：负责收集并维护由所有声明的标识符（变量）组成的一系列查询，并实施一套非常严格的规则，确定当前执行的代码对这些标识符的访问权限。</p>
+<h2 id="DOM-事件"><a href="#DOM-事件" class="headerlink" title="DOM 事件"></a>DOM 事件</h2><p>事件：文档或浏览器窗口中发生的一些特定的交互瞬间。</p>
+<p>事件流描述的是从页面中接收事件的顺序，有两种，事件冒泡和事件捕获。</p>
+<p>事件冒泡：事件最开始时由最具体的元素接收，然后逐级向上传播到较为不具体的节点。</p>
+<p>事件捕获：不太具体的节点更早接收到事件，而最具体的节点最后接收到事件。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;作用域&quot;&gt;&lt;a href=&quot;#作用域&quot; class=&quot;headerlink&quot; title=&quot;作用域&quot;&gt;&lt;/a&gt;作用域&lt;/h2&gt;&lt;p&gt;JS 引擎：从头到尾负责整个 JavaScript 程序的编译及执行过程。&lt;/p&gt;
+&lt;p&gt;编译器：负责语法分析及代码生成等。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://xandeer.me/categories/front-end/"/>
+    
+    
+      <category term="js" scheme="https://xandeer.me/tags/js/"/>
+    
+      <category term="JavaScript" scheme="https://xandeer.me/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Emmet--前端开发利器</title>
+    <link href="https://xandeer.me/2016/12/Emmet-%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%88%A9%E5%99%A8/"/>
+    <id>https://xandeer.me/2016/12/Emmet-前端开发利器/</id>
+    <published>2016-12-03T12:02:11.000Z</published>
+    <updated>2017-05-02T02:26:01.788Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.w3cplus.com/tools/emmet-cheat-sheet.html" target="_blank" rel="external">前端开发必备！Emmet使用手册</a><a id="more"></a></li>
+<li>Emmet的前身是大名鼎鼎的<code>Zen coding</code>，如果你从事<code>Web</code>前端开发的话，对该插件一定不会陌生。它使用仿<code>CSS</code>选择器的语法来生成代码，大大提高了<code>HTML/CSS</code>代码编写的速度，比如下面的演示：</li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2327/301ff5c9-3604-3dd3-a206-6d3516861ec4.jpg" alt="此处输入图片的描述"></p>
+<ul>
+<li>该插件已经改名为Emmet。但Emmet不只改名，还带来了一些新特性。</li>
+</ul>
+<h3 id="快速编写HTML代码"><a href="#快速编写HTML代码" class="headerlink" title="快速编写HTML代码"></a>快速编写HTML代码</h3><hr>
+<h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><hr>
+<ul>
+<li>HTML文档需要包含一些固定的标签，比如<code>&lt;html&gt;</code>、<code>&lt;head&gt;</code>、<code>&lt;body&gt;</code>等，现在你只需要1秒钟就可以输入这些标签。比如输入<code>“!”</code>或<code>“html:5”</code>，然后按<code>Tab</code>键：</li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2329/0070e820-1cbf-3f42-8c5b-838e5774d02b.gif" alt="此处输入图片的描述"></p>
+<ul>
+<li><code>html:5</code> 或!：用于<code>HTML5</code>文档类型</li>
+<li><code>html:xt</code>：用于XHTML过渡文档类型</li>
+<li><code>html:4s</code>：用于HTML4严格文档类型</li>
+</ul>
+<ul>
+<li>连续输入元素名称和<code>ID</code>，<code>Emmet</code>会自动为你补全，比如输入<code>p#foo</code>：</li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2331/cb250aef-3b60-3297-86ba-8c3ed36cacad.gif" alt="此处输入图片的描述"></p>
+<ul>
+<li>连续输入类和<code>id</code>，比如<code>p.bar#foo</code>，会自动生成：<code>Html</code>代码 <code>&lt;p class=&quot;bar&quot; id=&quot;foo&quot;&gt;&lt;/p&gt;</code></li>
+</ul>
+<p>下面来看看如何定义HTML元素的内容和属性。你可以通过输入h1{foo}和a[href=#]，就可以自动生成如下代码：</p>
+<p><code>&lt;h1&gt;foo&lt;/h1&gt;</code><br><code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code>  </p>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2333/167e1956-4ac6-3b6d-9025-8bf90fee1250.gif" alt="此处输入图片的描述"></p>
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><hr>
+<ul>
+<li>现在你只需要1行代码就可以实现标签的嵌套。<ul>
+<li><code>&gt;</code>：子元素符号，表示嵌套的元素</li>
+<li><code>+</code>：同级标签符号</li>
+<li><code>^</code>：可以使该符号前的标签提升一行</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2335/47ae82f5-4fd8-36a1-9b4e-d148237537ee.gif" alt="此处输入图片的描述"></p>
+<h4 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h4><hr>
+<ul>
+<li>你可以通过嵌套和括号来快速生成一些代码块，比如输入<code>(.foo&gt;h1)+(.bar&gt;h2)</code>，会自动生成如下代码：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"foo"</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </div><div class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </div><div class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bar"</span>&gt;</span>  </div><div class="line">     <span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p> <img src="http://dl.iteye.com/upload/attachment/0083/2337/ae3a8b58-244a-3680-9f0c-d0cab459fc41.gif" alt="此处输入图片的描述"></p>
+<h4 id="隐式标签"><a href="#隐式标签" class="headerlink" title="隐式标签"></a>隐式标签</h4><hr>
+<ul>
+<li><p>声明一个带类的标签，只需输入<code>div.item</code>，就会生成<code>&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;</code></p>
+</li>
+<li><p>在过去版本中，可以省略掉div，即输入<code>.item</code>即可生成<code>&lt;div class=&quot;item&quot;&gt;&lt;/div&gt;</code>。现在如果只输入<code>.item</code>，则<code>Emmet</code>会根据父标签进行判定。比如在<code>&lt;ul&gt;</code>中输入<code>.item</code>，就会生成<code>&lt;li class=&quot;item&quot;&gt;&lt;/li&gt;</code>。</p>
+</li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2339/363af658-650f-38d1-ad0e-9608df9d2873.gif" alt="此处输入图片的描述"></p>
+<ul>
+<li>下面是所有的隐式标签名称：<ul>
+<li><code>li</code>：用于<code>ul</code>和<code>ol</code>中</li>
+<li><code>tr</code>：用于table、tbody、thead和tfoot中</li>
+<li><code>td</code>：用于<code>tr</code>中</li>
+<li><code>option</code>：用于<code>select</code>和<code>optgroup</code>中</li>
+</ul>
+</li>
+</ul>
+<h4 id="定义多个元素"><a href="#定义多个元素" class="headerlink" title="定义多个元素"></a>定义多个元素</h4><hr>
+<ul>
+<li>要定义多个元素，可以使用<code>*</code>符号。比如，<code>ul&gt;li*3</code>可以生成如下代码：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2341/cf5613ac-4198-326e-a651-a08ad206800a.gif" alt="此处输入图片的描述"></p>
+<h4 id="定义多个带属性的元素"><a href="#定义多个带属性的元素" class="headerlink" title="定义多个带属性的元素"></a>定义多个带属性的元素</h4><hr>
+<ul>
+<li>如果输入 <code>ul&gt;li.item$*3</code>，将会生成如下代码：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item1"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item2"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"item3"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2343/a1c5f9d8-d187-3bde-895b-2e14fb428184.gif" alt="此处输入图片的描述"></p>
+<h3 id="CSS缩写"><a href="#CSS缩写" class="headerlink" title="CSS缩写"></a>CSS缩写</h3><hr>
+<h4 id="值"><a href="#值" class="headerlink" title="值"></a>值</h4><hr>
+<ul>
+<li>比如要定义元素的宽度，只需输入<code>w100</code>，即可生成 <code>width: 100px;</code>  </li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2345/21a47a7c-2d38-3231-8b4b-7d15f38be57a.gif" alt="此处输入图片的描述"></p>
+<ul>
+<li>除了<code>px</code>，也可以生成其他单位，比如输入<code>h10p+m5e</code>，结果如下：<ul>
+<li><code>height: 10%</code>;  </li>
+<li><code>margin: 5em</code>;</li>
+</ul>
+</li>
+<li>单位别名列表：<ul>
+<li><code>p</code> 表示<code>%</code></li>
+<li><code>e</code> 表示 <code>em</code></li>
+<li><code>x</code> 表示 <code>ex</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="附加属性"><a href="#附加属性" class="headerlink" title="附加属性"></a>附加属性</h4><hr>
+<ul>
+<li>可能你之前已经了解了一些缩写，比如 <code>@f</code>，可以生成：</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123;</div><div class="line"><span class="attribute">font-family</span>:;</div><div class="line">  <span class="attribute">src</span>:<span class="built_in">url</span>();  </div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>一些其他的属性，比如<code>background-image</code>、<code>border-radius</code>、<code>font</code>、<code>@font-face</code>,<code>text-outline</code>、<code>text-shadow</code>等额外的选项，可以通过<code>“+”</code>符号来生成，比如输入<code>@f+</code>，将生成：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123;  </div><div class="line">  <span class="attribute">font-family</span>: <span class="string">'FontName'</span>;  </div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'FileName.eot'</span>);  </div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'FileName.eot?#iefix'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>), <span class="built_in">url</span>(<span class="string">'FileName.woff'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),  </div><div class="line">       <span class="built_in">url</span>(<span class="string">'FileName.ttf'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>),  </div><div class="line">       <span class="built_in">url</span>(<span class="string">'FileName.svg#FontName'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>);  </div><div class="line">   <span class="attribute">font-style</span>: normal;  </div><div class="line">   <span class="attribute">font-weight</span>: normal;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2347/2c8cccf4-be54-3190-b1e7-3713717e2a78.gif" alt="此处输入图片的描述"></p>
+<h4 id="模糊匹配"><a href="#模糊匹配" class="headerlink" title="模糊匹配"></a>模糊匹配</h4><hr>
+<ul>
+<li><p>如果有些缩写你拿不准，<code>Emmet</code>会根据你的输入内容匹配最接近的语法，比如输入<code>ov:h</code>、<code>ov-h</code>、<code>ov</code>h和<code>oh</code>，生成的代码是相同的：<br><code>overflow: hidden</code>;</p>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2349/4c2c81e2-ebba-367e-a4fd-4f667d08ca84.gif" alt="此处输入图片的描述"></p>
+</li>
+</ul>
+<h4 id="供应商前缀"><a href="#供应商前缀" class="headerlink" title="供应商前缀"></a>供应商前缀</h4><hr>
+<ul>
+<li>如果输入非<code>W3C</code>标准的<code>CSS</code>属性，<code>Emmet</code>会自动加上供应商前缀，比如输入<code>trs</code>，则会生成：</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-transform</span>: ;</div><div class="line"><span class="selector-tag">-moz-transform</span>: ;  </div><div class="line"><span class="selector-tag">-ms-transform</span>: ;  </div><div class="line"><span class="selector-tag">-o-transform</span>: ;  </div><div class="line"><span class="selector-tag">transform</span>: ;</div></pre></td></tr></table></figure>
+<p> <img src="http://dl.iteye.com/upload/attachment/0083/2351/a68eda57-f573-343c-81b8-19e0a48c08fe.gif" alt="此处输入图片的描述"></p>
+<ul>
+<li>你也可以在任意属性前加上<code>“-”</code>符号，也可以为该属性加上前缀。比如输入<code>-super-foo</code>：</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-super-foo</span>: ;  </div><div class="line"><span class="selector-tag">-moz-super-foo</span>: ;  </div><div class="line"><span class="selector-tag">-ms-super-foo</span>: ;  </div><div class="line"><span class="selector-tag">-o-super-foo</span>: ;</div><div class="line"><span class="selector-tag">super-foo</span>: ;</div></pre></td></tr></table></figure>
+<ul>
+<li>如果不希望加上所有前缀，可以使用缩写来指定，比如<code>-wm-trf</code>表示只加上<code>-webkit</code>和<code>-moz</code>前缀：</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-transform</span>: ;  </div><div class="line"><span class="selector-tag">-moz-transform</span>: ;  </div><div class="line"><span class="selector-tag">transform</span>: ;</div></pre></td></tr></table></figure>
+<h4 id="前缀缩写如下："><a href="#前缀缩写如下：" class="headerlink" title="前缀缩写如下："></a>前缀缩写如下：</h4><hr>
+<ul>
+<li><code>w</code> 表示 <code>-webkit-</code></li>
+<li><code>m</code>表示 <code>-moz-</code></li>
+<li><code>s</code> 表示 <code>-ms-</code></li>
+<li><code>o</code> 表示 <code>-o-</code></li>
+</ul>
+<h4 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h4><hr>
+<ul>
+<li>输入<code>lg(left, #fff 50%, #000)</code>，会生成如下代码：</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">-webkit-gradient</span>(<span class="selector-tag">linear</span>, 0 0, 100% 0, <span class="selector-tag">color-stop</span>(0<span class="selector-class">.5</span>, <span class="selector-id">#fff</span>), <span class="selector-tag">to</span>(<span class="selector-id">#000</span>));</div><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">-webkit-linear-gradient</span>(<span class="selector-tag">left</span>, <span class="selector-id">#fff</span> 50%, <span class="selector-id">#000</span>);</div><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">-moz-linear-gradient</span>(<span class="selector-tag">left</span>, <span class="selector-id">#fff</span> 50%, <span class="selector-id">#000</span>);</div><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">-o-linear-gradient</span>(<span class="selector-tag">left</span>, <span class="selector-id">#fff</span> 50%, <span class="selector-id">#000</span>);</div><div class="line"><span class="selector-tag">background-image</span>: <span class="selector-tag">linear-gradient</span>(<span class="selector-tag">left</span>, <span class="selector-id">#fff</span> 50%, <span class="selector-id">#000</span>);</div></pre></td></tr></table></figure>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2353/f39213f9-5d68-3728-8cf3-7964aaa02bae.gif" alt="此处输入图片的描述"></p>
+<h3 id="附加功能"><a href="#附加功能" class="headerlink" title="附加功能"></a>附加功能</h3><hr>
+<h4 id="生成Lorem-ipsum文本"><a href="#生成Lorem-ipsum文本" class="headerlink" title="生成Lorem ipsum文本"></a>生成Lorem ipsum文本</h4><hr>
+<ul>
+<li>引用 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero delectus.</li>
+</ul>
+<p><img src="http://dl.iteye.com/upload/attachment/0083/2355/87a3d500-1798-3050-b7e0-df51c94bd203.gif" alt="此处输入图片的描述"></p>
+<h3 id="定制"><a href="#定制" class="headerlink" title="定制"></a>定制</h3><hr>
+<ul>
+<li>你还可以定制Emmet插件：<ul>
+<li>添加新缩写或更新现有缩写，可修改 <a href="http://docs.emmet.io/customization/snippets/" target="_blank" rel="external">snippets.json</a> 文件</li>
+<li>更改<code>Emmet</code>过滤器和操作的行为，可修改 <a href="http://docs.emmet.io/customization/preferences/" target="_blank" rel="external">preferences.json</a> 文件</li>
+<li>定义如何生成<code>HTML</code>或<code>XML</code>代码，可修改 <a href="http://docs.emmet.io/customization/syntax-profiles/" target="_blank" rel="external">syntaxProfiles.json</a> 文件</li>
+</ul>
+</li>
+</ul>
+<h3 id="针对不同编辑器的插件"><a href="#针对不同编辑器的插件" class="headerlink" title="针对不同编辑器的插件*"></a>针对不同编辑器的插件*</h3><hr>
+<ul>
+<li>Emmet支持的编辑器如下（链接为针对该编辑器的<code>Emmet</code>插件）：<ul>
+<li><a href="https://github.com/sergeche/emmet-sublime" target="_blank" rel="external">Sublime Text 2</a></li>
+<li><a href="https://github.com/emmetio/Emmet.tmplugin" target="_blank" rel="external">TextMate 1.x</a></li>
+<li><a href="https://github.com/emmetio/emmet-eclipse" target="_blank" rel="external">Eclipse/Aptana</a></li>
+<li><a href="https://github.com/emmetio/Emmet.codaplugin" target="_blank" rel="external">Coda 1.6 and 2.x</a></li>
+<li><a href="https://github.com/emmetio/Emmet.sugar" target="_blank" rel="external">Espresso</a></li>
+<li><a href="https://github.com/sergeche/emmet.chocmixin" target="_blank" rel="external">Chocolat （通过“Install Mixin”对话框添加)</a></li>
+<li><a href="https://github.com/emmetio/emmet/downloads" target="_blank" rel="external">Komodo Edit/IDE</a> （通过Tools → Add-ons菜单添加)</li>
+<li><a href="https://github.com/emmetio/emmet/downloads" target="_blank" rel="external">Notepad++</a></li>
+<li><a href="https://github.com/emmetio/emmet/downloads" target="_blank" rel="external">PSPad</a></li>
+<li><a href="https://github.com/emmetio/emmet/downloads" target="_blank" rel="external">textarea</a></li>
+<li><a href="https://github.com/emmetio/codemirror" target="_blank" rel="external">CodeMirror2/3</a></li>
+<li><a href="https://github.com/emmetio/brackets-emmet" target="_blank" rel="external">Brackets</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Emmet官网文档："><a href="#Emmet官网文档：" class="headerlink" title="Emmet官网文档："></a>Emmet官网文档：</h3><hr>
+<ul>
+<li><a href="http://emmet.io/download/" target="_blank" rel="external">emmet插件下载中心</a></li>
+<li><a href="https://github.com/emmetio/emmet" target="_blank" rel="external">GitHub主页</a></li>
+<li><a href="http://docs.emmet.io/cheat-sheet/" target="_blank" rel="external">emmet快捷键表</a></li>
+<li><a href="http://docs.emmet.ioio/cheat-sheet/" target="_blank" rel="external">emmet文档</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3cplus.com/tools/emmet-cheat-sheet.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;前端开发必备！Emmet使用手册&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://xandeer.me/categories/front-end/"/>
+    
+    
+      <category term="emmet" scheme="https://xandeer.me/tags/emmet/"/>
+    
+  </entry>
+  
+</feed>
